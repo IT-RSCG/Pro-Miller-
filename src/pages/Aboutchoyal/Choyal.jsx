@@ -1,0 +1,94 @@
+import { useState } from "react";
+import "./Choyal.css";
+
+import start from "../../assets/start.webp";
+import vishwakarma from "../../assets/vishwakarma.webp";
+import emerystone from "../../assets/emerystone.webp";
+import start1 from "../../assets/start1.webp";
+import automation from "../../assets/automation.webp";
+import wm from "../../assets/wm.webp";
+import eleven from "../../assets/2011.webp";
+import thirteen from "../../assets/2013.webp";
+import eighteen from "../../assets/2018.webp";
+import twentyone from "../../assets/2021.webp";
+import twentyfive from "../../assets/2025.webp";
+
+export default function Choyal() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const timeline = [
+    { year: "1951", title: "Foundation of Choyal Group", text: "B.M. Choyal along with R.D. Sharma lays the foundation of our legacy by starting the company with a vision to revolutionize the grain milling industry in India.", image: start },
+    { year: "1965", title: "Our Journey Begins", text: "The company is formally incorporated as Shri Vishvakarma Industries, marking the beginning of industrial excellence and innovation.", image: vishwakarma },
+    { year: "1970", title: "International Outreach", text: "We became the first company from India in the grain milling sector to export emery stone globally, earning recognition for excellence in exports.", image: emerystone },
+    { year: "1978", title: "First Manufacturing Unit", text: "Our first factory unit was established at Saradhana, Ajmer under SVIPL, marking a major milestone in industrial growth.", image: start1 },
+    { year: "2000", title: "Automation Era Begins", text: "Launch of automated modeling workshop, enhancing precision, consistency, and efficiency in production systems.", image: automation },
+    { year: "2010", title: "Digital Flour Mill Innovation", text: "Development of the world's first fully automatic digital stone mill, revolutionizing traditional milling technology.", image: wm },
+    { year: "2011", title: "Turnkey Solutions Expansion", text: "Introduction of complete turnkey solutions with successful delivery of 250+ projects worldwide.", image: eleven },
+    { year: "2013", title: "Patented Engineering Solutions", text: "Launch of patented emery stone dressing machine, improving maintenance efficiency and industrial performance.", image: thirteen },
+    { year: "2018", title: "Diversification Phase", text: "Expansion into the grocery sector, strengthening business understanding and market adaptability.", image: eighteen },
+    { year: "2021", title: "Smart Technology Innovation", text: "Introduction of world's first digital fresh flour grinding machine powered by smart automation.", image: twentyone },
+    { year: "2025", title: "New Era Begins", text: "Choyal legacy evolves into independent entities including Choyal Grinding Solutions Pvt. Ltd., focusing on advanced grinding technologies.", image: twentyfive },
+  ];
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? timeline.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === timeline.length - 1 ? 0 : prev + 1));
+  };
+
+  const activeItem = timeline[activeIndex];
+
+  return (
+    <div className="journey-slider-section">
+      <div className="journey-backdrop-asset">
+        <img src={twentyfive} alt="" aria-hidden="true" />
+      </div>
+      <div className="journey-backdrop-overlay"></div>
+
+      <div className="journey-slider-container">
+        <div className="journey-stage">
+          <div className="journey-stage__content">
+            <span className="journey-stage__subtitle">OUR JOURNEY</span>
+            <h1 className="journey-stage__year-big">{activeItem.year}</h1>
+            <h2 className="journey-stage__title">{activeItem.title}</h2>
+            <p className="journey-stage__desc">{activeItem.text}</p>
+          </div>
+
+          <div className="journey-stage__media">
+            <img
+              src={activeItem.image}
+              alt={activeItem.title}
+              className="journey-stage__free-image"
+            />
+          </div>
+        </div>
+
+        <div className="journey-controls-row">
+          <div className="journey-timeline-track">
+            <div className="track-line-bg"></div>
+
+            <div className="track-nodes-container">
+              {timeline.map((item, idx) => (
+                <div
+                  key={item.year}
+                  className={`timeline-tick-wrapper ${idx === activeIndex ? "is-active" : ""}`}
+                  onClick={() => setActiveIndex(idx)}
+                >
+                  <span className="timeline-year-label">{item.year}</span>
+                  <div className="timeline-tick-mark"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="journey-nav-arrows">
+            <button className="nav-arrow prev" onClick={handlePrev}>&#10094;</button>
+            <button className="nav-arrow next" onClick={handleNext}>&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

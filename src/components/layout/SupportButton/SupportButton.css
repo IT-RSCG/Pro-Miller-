@@ -1,0 +1,25 @@
+.support-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 24px;
+
+  background: #ff7800;
+  color: #fff;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+
+  font-weight: 600;
+  font-size: 13px;
+  font-family:"Lato",sans-serif;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 999;
+
+  transition: 0.3s ease;
+}
+
+.support-btn:hover {
+  transform: translateY(-3px);
+  background:  #ffa8065d;
+}

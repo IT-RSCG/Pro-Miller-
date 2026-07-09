@@ -1,0 +1,263 @@
+
+/* =========================
+   HERO BASE
+========================= */
+
+.hero {
+  background: #000;
+}
+
+/* =========================
+   VIDEO SECTION
+========================= */
+
+.hero__frame {
+  position: relative;
+  height: min(550px, calc(85vh - 40px));
+  min-height: 580px;
+  overflow: hidden;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+}
+
+/* =========================
+   LOGOS (BIG FIX)
+========================= */
+
+.hero__logo-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  z-index: 10;
+  margin-bottom:100px;
+}
+
+.logo-left {
+  height: 280px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-right {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+/* =========================
+   CONTENT
+========================= */
+
+.hero__content h1 {
+  color: white;
+  font-size:36px;
+  margin: 0;
+  font-weight: 700;
+  padding-top: 90px;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__content p {
+  color: #ff7800;
+  margin-top: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size:15px;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__content {
+  width: min(100% - 32px, 920px);
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__btn {
+  margin-top: 20px;
+  padding: 14px 34px;
+  border: none;
+  background: #ff7800;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size:15px;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__btn:hover {
+  transform: translateY(-4px);
+  background:#ffa8065d;
+}
+
+/* =========================
+   STATS BAR (OLD STYLE RESTORED)
+========================= */
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+   background: linear-gradient(
+    90deg,
+    oklch(45% 0.08 150),
+    oklch(55% 0.09 145)
+  ); 
+  padding: 25px 0;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__stat-col {
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+
+.hero__stat-col:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,0.6);
+  font-family:'Lato',sans-serif;
+}
+
+.hero__stat-col h2 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color:white;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__stat-col p {
+  margin-top: 5px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family:'Lato',sans-serif;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .hero__frame {
+    height: calc(100svh - 96px);
+    min-height: 520px;
+  }
+
+  .hero__logo-wrapper {
+    top: 10px;
+    padding: 0 18px;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .hero__stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 18px 0;
+  }
+
+  .logo-left {
+    height: clamp(88px, 25vw, 130px);
+    max-width: 58vw;
+  }
+
+  .logo-right {
+    height: clamp(44px, 12vw, 62px);
+    max-width: 32vw;
+  }
+
+  .hero__content {
+    margin-top: 82px;
+    gap: 12px;
+  }
+
+  .hero__content h1 {
+    font-size: 36px;
+    padding-top: 0;
+    line-height: 1.15;
+  }
+
+  .hero__content p {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .hero__btn {
+    margin-top: 5px;
+    padding: 12px 24px;
+    background-color:#ff7800;
+    font-size:15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__frame {
+    min-height: 500px;
+  }
+
+  .hero__logo-wrapper {
+    top: 0;
+    align-items: center;
+    min-height: 112px;
+  }
+
+  .logo-left {
+    height: clamp(88px, 28vw, 112px);
+    max-width: 58vw;
+  }
+
+  .logo-right {
+    height: clamp(42px, 12vw, 54px);
+    max-width: 30vw;
+  }
+
+  .hero__stats {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1px;
+  }
+
+  .hero__stat-col {
+    padding: 8px 10px;
+  }
+
+  .hero__stat-col h2 {
+    font-size: 20px;
+  }
+
+  .hero__stat-col p {
+    font-size: 15px;
+    line-height: 1.35;
+  }
+}

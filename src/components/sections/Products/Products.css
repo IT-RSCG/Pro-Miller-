@@ -1,0 +1,420 @@
+
+.process {
+  padding: 0 24px;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.process__title {
+  text-align: center;
+  font-size: clamp(24px, 5vw, 32px);
+  margin-bottom: 10px;
+  color: #0d5b43;
+  font-family:"Lato",sans-serif;
+  font-size:36px;
+  font-weight: 700;
+  padding: 0 15px;
+}
+
+.process__subtitle {
+  text-align: center;
+  margin-bottom: 60px;
+  color: black;
+  padding: 0 15px;
+  font-family:"Lato",sans-serif;
+  font-size:20px;
+  font-weight:500;
+}
+
+.process__timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  gap: 15px;
+  min-height: 460px;
+  overflow: visible;
+  z-index: 2;
+  font-family:"Lato",sans-serif;
+  font-size:20px;
+}
+
+/* Horizontal Track line for Laptops/Desktops */
+.process__timeline::before {
+  content: "";
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-rule, #d8d2c4);
+
+}
+
+.process__step {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: visible;
+  z-index: 5;
+  font-family:"Lato",sans-serif;
+  font-size:20px;
+}
+
+.process__step--hovered {
+  z-index: 100;
+}
+
+.process__step--hovered .process__label {
+  opacity: 0;
+  visibility: hidden;
+  font-family:"Lato",sans-serif;
+  font-size:20px;
+}
+
+.process__number {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--color-paper, #faf8f4);
+  border: 1px solid var(--color-rule, #d8d2c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 153px auto 0;
+  font-family:"Lato",sans-serif;
+  font-size:20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 10;
+}
+
+.process__label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 25px auto 0;
+  height: 180px;
+  font-family:"Lato",sans-serif;
+  font-size:20px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+/* ---------- Laptop Hover Card Default ---------- */
+.process__hover-card {
+  position: absolute;
+  top: 15px;
+  width: 220px;
+  height: 380px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-rule);
+  box-shadow: 0 20px 45px rgba(0,0,0,.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(.97);
+  z-index: 500;
+  transition: 
+    width .45s cubic-bezier(.22,1,.36,1),
+    height .45s cubic-bezier(.22,1,.36,1),
+    opacity .25s ease,
+    transform .35s ease,
+    left .45s,
+    right .45s;
+}
+
+.process__step--hovered .process__hover-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.card-right { left: 35px; }
+.card-left { right: 35px; }
+
+/* ---------- Laptop Expanded Card View ---------- */
+.process__hover-card.expanded {
+  width:650px;
+  height:300px;
+  display: flex;
+  top: 15px;
+  overflow: hidden;
+  z-index: 600;
+}
+
+.card-right.expanded { left: 35px; right: auto; }
+.card-left.expanded { right: 35px; left: auto; }
+
+.process__card-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: width .45s cubic-bezier(.22,1,.36,1), transform .35s ease;
+}
+
+.process__hover-card.expanded .process__card-image {
+  width: 48%;
+}
+
+.process__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s ease, filter .35s ease;
+}
+
+.process__hover-card:hover img {
+  transform: scale(1.05);
+}
+
+.process__image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.55));
+}
+
+.vertical-text {
+  margin: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+   font-family:"Lato",sans-serif;
+  font-size:20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,.45);
+}
+
+.process__card-content {
+  width: 52%;
+  padding: 35px;
+  position: relative;
+  overflow-y: auto;
+  box-sizing: border-box;
+  opacity: 1;
+  visibility: visible;
+}
+
+.process__card-content h3 {
+  margin: 0 0 20px;
+   font-family:"Lato",sans-serif;
+  font-size:20px;
+}
+
+.process__card-content p {
+   font-family:"Lato",sans-serif;
+  font-size:13px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.process__card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.process__card-links a {
+  text-decoration: none;
+  color: var(--color-accent, #6b4226);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.process__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f4f4f4;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+
+.process__close:hover { background: #ddd; }
+.process__card-content::-webkit-scrollbar { width: 8px; }
+.process__card-content::-webkit-scrollbar-thumb { background: #c2c2c2; border-radius: 20px; }
+
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE OVERRIDES (1024px and below)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .process__subtitle {
+    margin-bottom: 40px;
+  }
+
+  .process__timeline {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    margin: 20px auto 0;
+    min-height: auto;
+  }
+
+  /* Structural Shift to a Clean Vertical Tracking Axis */
+  .process__timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 1px;
+    height: 100%;
+  }
+
+  .process__step {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .process__number {
+    width: 45px;
+    height: 45px;
+    margin: 0 0 0 18px; /* Perfectly aligns relative to the line track */
+    font-size: 18px;
+  }
+
+  .process__label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    margin: 0 0 0 18px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .process__step--hovered .process__label {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* ---------- Mobile Card Layout Override ---------- */
+  .process__hover-card {
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    width: calc(100% - 18px);
+    max-width: 100%;
+    margin-left: 18px;
+    height: 0; /* Hidden smoothly when not active */
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: none;
+    border: 0 solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* Triggers immediately on tap */
+  .process__step--hovered .process__hover-card {
+    opacity: 1;
+    visibility: visible;
+    height: 440px; /* Standard viewable container */
+    border: 1px solid var(--color-rule);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 10px;
+  }
+
+  /* Prevent image configuration collisions from hiding text components */
+  .process__hover-card .process__card-image,
+  .process__hover-card.expanded .process__card-image {
+    width: 100% !important;
+    height: 40% !important;
+  }
+
+  .vertical-text {
+    font-size: 20px;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  /* Force display text block to stack instantly below the header graphic */
+  .process__hover-card .process__card-content,
+  .process__hover-card.expanded .process__card-content {
+    display: block !important;
+    width: 100% !important;
+    height: 60% !important;
+    padding: 20px;
+  }
+
+  .process__card-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .process__card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .process__card-links { gap: 8px; }
+  .process__card-links a { font-size: 14px; }
+
+  .process__close {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+}
+
+@media (max-width: 560px) {
+  .process {
+    padding: 34px 0 54px;
+  }
+
+  .process__subtitle {
+    margin-bottom: 28px;
+  }
+
+  .process__timeline {
+    padding: 0 12px;
+  }
+
+  .process__step--hovered .process__hover-card {
+    height: auto;
+    min-height: 420px;
+    max-height: none;
+  }
+
+  .process__hover-card .process__card-image,
+  .process__hover-card.expanded .process__card-image {
+    height: 210px !important;
+  }
+
+  .process__hover-card .process__card-content,
+  .process__hover-card.expanded .process__card-content {
+    height: auto !important;
+    overflow: visible;
+  }
+}

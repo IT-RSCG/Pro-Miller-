@@ -1,0 +1,267 @@
+.network-section {
+  padding: 40px 0 70px; 
+ background: 
+    radial-gradient(circle at 35% 40%, oklch(62% 0.10 145) 0%, transparent 65%),
+    linear-gradient(135deg, oklch(55% 0.09 145) 0%, oklch(42% 0.08 150) 100%); 
+  border-radius: 32px; 
+  margin: 0 20px; 
+  font-family: 'Lato',sans-serif;
+  overflow: hidden;
+}
+
+.network-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.network-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 0 10px;
+}
+
+.network-header h2 {
+  font-family: 'Lato',sans-serif;
+  font-size: 36px; 
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  color:#fff;
+}
+
+.network-header p {
+  color: #6e665a;
+  font-family: 'Lato',sans-serif;
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family:"Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Three-Column Grid System */
+.network-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.network-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Tightened layout spacing */
+}
+
+.network-col h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #D8DED8;
+  padding-bottom: 8px;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.challenges-side h3 { text-align: left; }
+.solutions-side h3 { text-align: right; }
+
+.network-node {
+  background: #ffffff;
+  border: 1px solid #d8d2c4;
+  border-radius: 12px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 76px;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  box-sizing: border-box;
+}
+
+.network-node p {
+  margin: 0;
+  font-family:"Lato",sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1c1a17;
+  line-height: 1.5;
+}
+
+.node-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background-color 0.3s;
+}
+.crimson-dot { background-color: #e53e3e; }
+.emerald-dot { background-color: #2e7d32; }
+
+.challenge-card {
+  cursor: pointer;
+}
+
+.active-challenge {
+  transform: translateX(10px) scale(1.02);
+  border-color: #1c1a17;
+  box-shadow: 0 10px 25px rgba(28, 26, 23, 0.08);
+}
+
+.active-solution {
+  transform: translateX(-10px) scale(1.04);
+  border-color: #1c1a17;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.dimmed-solution {
+  opacity: 0.35;
+  transform: scale(0.97);
+}
+
+.network-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.circuit-board {
+  width: 100%;
+  max-height: 450px;
+}
+
+.circuit-wire {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1;
+}
+
+.hub-circle {
+  fill: #ffffff;
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+.hub-icon {
+  font-size: 14px;
+  user-select: none;
+  z-index: 10;
+}
+
+/* 1. Medium Screens / Tablet Landscape */
+@media (max-width: 1100px) {
+  .network-grid {
+    grid-template-columns: 1fr 220px 1fr; 
+    gap: 20px;
+  }
+  .active-challenge { transform: translateX(6px) scale(1.01); }
+  .active-solution { transform: translateX(-6px) scale(1.02); }
+}
+
+/* 2. Small Screens & Mobile Portraits (Forces Side-by-Side connection) */
+@media (max-width: 992px) {
+  .network-section {
+    padding: 30px 0 60px;
+  }
+
+  /* PRESERVES 3-column layout, scales center down dynamically */
+  .network-grid {
+    grid-template-columns: 1fr clamp(100px, 18vw, 180px) 1fr;
+    gap: 12px;
+  }
+
+  .network-col {
+    gap: 12px; /* Pulls cards tighter vertically */
+  }
+
+  .network-col h3 {
+    font-size: 11px;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+  }
+
+  /* Compact nodes so long words do not break layout */
+  .network-node {
+    padding: 10px 12px;
+    gap: 8px;
+    min-height: 60px;
+    border-radius: 8px;
+  }
+
+  .network-node p {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .node-indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .circuit-board {
+    max-height: 280px; /* Shrinks the SVG height proportionally */
+  }
+
+  /* Subtle micro-animations optimized for cramped screen states */
+  .active-challenge { transform: translateX(4px) scale(1.01); }
+  .active-solution { transform: translateX(-4px) scale(1.01); }
+}
+
+/* 3. Tiny Screen Handsets (Down to 360px wide devices) */
+@media (max-width: 480px) {
+  .network-section {
+    margin: 0 10px;
+    border-radius: 20px;
+  }
+
+  .network-container {
+    padding: 0 8px; /* Maximizes side edges */
+  }
+
+  .network-grid {
+    grid-template-columns: 1fr clamp(60px, 15vw, 100px) 1fr;
+    gap: 6px;
+  }
+
+  .network-node {
+    padding: 8px 10px;
+    gap: 6px;
+    min-height: 54px;
+  }
+
+  .network-node p {
+    font-size: 9.5px; /* Ensures text stays fully contained inside the row blocks */
+  }
+
+  .circuit-board {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 380px) {
+  .network-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .network-center {
+    display: none;
+  }
+
+  .solutions-side h3 {
+    text-align: left;
+  }
+
+  .network-node p {
+    font-size: 12px;
+  }
+
+  .active-challenge,
+  .active-solution {
+    transform: none;
+  }
+}

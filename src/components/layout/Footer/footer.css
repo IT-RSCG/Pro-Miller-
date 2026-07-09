@@ -1,0 +1,137 @@
+.footer {
+  background: linear-gradient(
+  90deg,
+  oklch(45% 0.08 150) 0%,
+  oklch(55% 0.09 145) 100%
+);
+  padding: 40px 0 0;
+  position: relative; 
+}
+
+.footer__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 600px) {
+  .footer__container {
+    /* Splits into a clean 2x2 grid on tablets */
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 40px;
+  }
+}
+
+/* Large Screens / Desktops (1025px and up) */
+@media (min-width: 1025px) {
+  .footer__container {
+    /* Restores your exact original 4-column configuration */
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    gap: 60px;
+    padding: 0 60px;
+  }
+}
+
+.footer__column h2 {
+  font-family:"Lato",sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.footer__column h3 { 
+   font-family:"Lato",sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.footer__column p {
+   font-family:"Lato",sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+.footer__column li {
+   font-family:"Lato",sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  list-style: none; /* Safely removes bullet points if not already handled */
+}
+
+.footer__column li:hover {
+  color: #ffffff;
+}
+
+/* --- Form Adjustments --- */
+.footer__form input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  padding: 0 16px;
+  font-size: 13px;
+   font-family:"Lato",sans-serif;
+  background: #3a3a3a;
+  color: #ffffff;
+  margin-bottom: 14px;
+  box-sizing: border-box; /* Prevents input padding from expanding beyond 100% width */
+}
+
+.footer__form button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(229, 126, 1, 0.95);
+  color: #fff;
+  font-size: 13px;
+   font-family:"Lato",sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Footer Bottom & Logo --- */
+.footer__bottom {
+  max-width: 1400px;
+  margin: 40px auto 0;
+  padding: 20px 5%;
+  border-top: 1px solid #4a4a4a;
+  display: flex;
+  /* Stacks vertically on mobile, horizontal on desktop */
+  flex-direction: column; 
+  gap: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 60px;
+    text-align: left;
+  }
+}
+
+.footer__copyright {
+  font-size: 13px;
+   font-family:"Lato",sans-serif;
+  color: #ffffff;
+}
+
+/* Removed absolute positioning to stop it from breaking layouts or overlapping */
+.footer__logo img {
+  height: 55px;
+  width: auto;
+  display: block;
+}
