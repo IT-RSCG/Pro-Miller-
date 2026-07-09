@@ -14,7 +14,7 @@
 .hero__frame {
   position: relative;
   height: min(550px, calc(85vh - 40px));
-  min-height: 580px;
+  min-height: 520px;
   overflow: hidden;
 }
 

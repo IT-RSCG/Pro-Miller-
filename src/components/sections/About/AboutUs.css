@@ -109,6 +109,7 @@
 .benefits-section {
     margin-top:10px;
     margin-bottom:60px;
+    color: #0d5b43;
 }
 
 .section-heading {
@@ -127,7 +128,7 @@
 
 .section-heading h2 {
     margin-top: 10px;
-    color: #17392d;
+     color: #0d5b43;;
     line-height: 1.2;
     font-weight: 700;
     font-family: "Lato", sans-serif;
