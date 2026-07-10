@@ -1,11 +1,11 @@
 .rs-theater-wrapper {
   position: relative;
   min-height: 100vh;
-  background: #111713;
-  color: #ffffff;
+  background: #f7f5ef;
+  color: #000;
   isolation: isolate;
 }
-
+/* 
 .rs-theater-wrapper::before {
   content: "";
   position: fixed;
@@ -23,7 +23,7 @@
   inset: 0;
   z-index: -1;
   background: rgba(10, 18, 13, 0.82);
-}
+} */
 
 .rs-theater-main-content {
   padding: 34px 0 58px;
@@ -89,31 +89,34 @@
 .rs-theater-text-side {
   max-width: 650px;
 }
-
 .rs-theater-tagline {
   display: inline-block;
   margin-bottom: 14px;
   color: var(--color-accent);
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 800;
+  font-family: "Lato", sans-serif;
   letter-spacing: 0.18em;
 }
-
 .rs-theater-heading {
   margin: 0 0 14px;
-  color: #ffffff;
-  font-size: clamp(34px, 5vw, 56px);
+  font-size: 36px;
+  font-family: "Lato", sans-serif;
+  color: #000;
 }
 
 .rs-theater-paragraphs {
   display: grid;
   gap: 12px;
+  font-family:"Lato",sans-serif;
+  color: black;
 }
 
 .rs-theater-paragraphs p {
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.65;
+  font-family: "Lato", sans-serif;
+  color: #000;
 }
 
 .rs-theater-impact {
@@ -146,7 +149,7 @@
 
 .rs-impact-card p {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
 }
 

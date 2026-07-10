@@ -40,13 +40,12 @@ export default function AboutUs() {
   return (
     <section className="about-section">
       <div className="about-container">
-
         {/* ---------- TOP SECTION ---------- */}
         <div className="about-top">
           <div className="about-content">
-            <span className="about-tag">
-              ABOUT PROMILLER
-            </span>
+            <h2 className="about-title">ABOUT PROMILLER</h2>
+
+            <div className="about-title-line"></div>
 
             <p>
               <strong>ProMiller</strong> is a next-generation milling ecosystem
@@ -62,15 +61,11 @@ export default function AboutUs() {
             </p>
 
             <a href="#blank" className="about-btn">
-              Explore More 
+              Explore More
             </a>
           </div>
           <div className="about-image-wrapper">
-            <img
-              src={wm}
-              alt="ProMiller"
-              className="about-main-image"
-            />
+            <img src={wm} alt="ProMiller" className="about-main-image" />
           </div>
         </div>
 
@@ -78,17 +73,13 @@ export default function AboutUs() {
         <div className="benefits-section">
           <div className="section-heading">
             <span>WHY PROMILLER</span>
-            <h2>
-              Everything Your Mill Needs to Grow
-            </h2>
+            <h2>Everything Your Mill Needs to Grow</h2>
           </div>
 
           <div className="benefits-grid">
             {BENEFITS.map((item, index) => (
               <div className="benefit-card" key={index}>
-                <div className="benefit-icon">
-                  {item.icon}
-                </div>
+                <div className="benefit-icon">{item.icon}</div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -133,7 +124,6 @@ export default function AboutUs() {
             </a>
           </div>
         </div> */}
-
       </div>
     </section>
   );

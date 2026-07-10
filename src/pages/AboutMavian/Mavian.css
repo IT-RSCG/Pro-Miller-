@@ -88,6 +88,7 @@
   margin: 0 0 14px;
   color: var(--color-primary);
   font-size: clamp(28px, 3.5vw, 44px);
+  text-align:center;
 }
 
 .mavian-premium-content p {
@@ -129,7 +130,8 @@
 .workflow-container {
   display: grid;
   gap: 8px;
-  width: min(100%, 440px);
+  width: min(100%, 620px);
+  
 }
 
 .flow-step {

@@ -5,7 +5,6 @@ import industrialist from "../../assets/industrialist.webp";
 import innovator from "../../assets/innovator.webp";
 import author from "../../assets/author.webp";
 import motivator from "../../assets/motivator.webp";
-import backgroundFactory from "../../assets/2025.webp";
 
 export default function Director() {
   useEffect(() => {
@@ -17,7 +16,7 @@ export default function Director() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     const sections = document.querySelectorAll(".rs-theater-frame");
@@ -32,43 +31,45 @@ export default function Director() {
       image: industrialist,
       lines: [
         "Built a globally recognized industrial ecosystem in flour milling, engineering, and food processing technologies.",
-        "Established scalable manufacturing systems and expanded operations across multiple countries, making the Choyal Group a trusted global name."
-      ]
+        "Established scalable manufacturing systems and expanded operations across multiple countries, making the Choyal Group a trusted global name.",
+      ],
     },
     {
       role: "Innovator",
       image: innovator,
       lines: [
         "Introduced breakthrough technologies such as Wonder Mill, automated milling systems, and energy-efficient grinding solutions.",
-        "Focused on reducing operational costs, increasing efficiency, and bringing digital transformation into traditional milling processes."
-      ]
+        "Focused on reducing operational costs, increasing efficiency, and bringing digital transformation into traditional milling processes.",
+      ],
     },
     {
       role: "Author",
       image: author,
       lines: [
         "Authored books on leadership, personality development, motivation, and industrial growth.",
-        "His writings focus on discipline, mindset transformation, and practical success principles for students, entrepreneurs, and professionals."
-      ]
+        "His writings focus on discipline, mindset transformation, and practical success principles for students, entrepreneurs, and professionals.",
+      ],
     },
     {
       role: "Motivator",
       image: motivator,
       lines: [
         "A widely respected speaker and mentor who has addressed thousands of students, entrepreneurs, and industry professionals across India and abroad.",
-        "His seminars focus on mindset building, leadership development, and unlocking human potential."
-      ]
-    }
+        "His seminars focus on mindset building, leadership development, and unlocking human potential.",
+      ],
+    },
   ];
 
   return (
-    <div className="rs-theater-wrapper" style={{ "--factory-src": `url(${backgroundFactory})` }}>
+    <div className="rs-theater-wrapper">
       <main className="rs-theater-main-content">
         {profiles.map((profile, index) => (
           <section key={profile.role} className="rs-theater-frame">
             <div className="rs-theater-container">
-              <div className={`rs-theater-grid ${index % 2 !== 0 ? "is-reversed" : ""}`}>
-                <div className="rs-theater-image-side large-view">
+              <div
+                className={`rs-theater-grid ${index % 2 !== 0 ? "is-reversed" : ""}`}
+              >
+                <div className="rs-theater-image-side">
                   <img
                     src={profile.image}
                     alt={profile.role}
@@ -76,6 +77,16 @@ export default function Director() {
                   />
                 </div>
 
+                <div className="rs-theater-text-side">
+                  <span className="rs-theater-tagline">ABOUT OUR DIRECTOR</span>
+                  <h2 className="rs-theater-heading">{profile.role}</h2>
+
+                  <div className="rs-theater-paragraphs">
+                    {profile.lines.map((textLine, lineIdx) => (
+                      <p key={lineIdx}>{textLine}</p>
+                    ))}
+                  </div>
+                </div>
                 <div className="rs-theater-text-side">
                   <span className="rs-theater-tagline">ABOUT OUR DIRECTOR</span>
                   <h2 className="rs-theater-heading">{profile.role}</h2>

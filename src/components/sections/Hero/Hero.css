@@ -14,7 +14,7 @@
 .hero__frame {
   position: relative;
   height: min(550px, calc(85vh - 40px));
-  min-height: 520px;
+  min-height: 590px;
   overflow: hidden;
 }
 
@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.2);
 }
 
 /* =========================
@@ -78,10 +78,21 @@
   font-family:'Lato',sans-serif;
 }
 
+.text_1{
+  color: #ff7800;
+  font-weight:800;
+}
+
+.text_2{
+  color:#fff;
+}
+.text_3{
+color:#21b65f;
+}
 .hero__content p {
   color: #ff7800;
   margin-top: 50px;
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: 2px;
   font-size:15px;
   font-family:'Lato',sans-serif;
@@ -151,7 +162,7 @@
 
 .hero__stat-col h2 {
   margin: 0;
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 700;
   color:white;
   font-family:'Lato',sans-serif;
@@ -159,7 +170,7 @@
 
 .hero__stat-col p {
   margin-top: 5px;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family:'Lato',sans-serif;

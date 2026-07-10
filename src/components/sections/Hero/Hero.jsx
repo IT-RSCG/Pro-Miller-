@@ -247,8 +247,13 @@ export default function Hero() {
           {/* CENTER CONTENT */}
           <div className="hero__content">
             <h1>
-              FLOUR MILLING WITHOUT THE INVESTMENT <br />
-              SAVING WITHOUT THE HASSLE
+             <span className="text_1">FLOUR MILLING</span>{" "}
+             <span className="text_2">WITHOUT</span>{" "}
+             <span className="text_1">THE INVESTMENT</span>
+             <br/>
+              <span className="text_2">SAVING</span>{" "}
+              <span className="text_1">WITHOUT</span>{" "} 
+              <span className="text_2">THE HASSLE</span>
             </h1>
 
             <p>MARKET LEADING RANGE, QUALITY AND CHOICE</p>

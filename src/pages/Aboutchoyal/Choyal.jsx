@@ -42,10 +42,6 @@ export default function Choyal() {
 
   return (
     <div className="journey-slider-section">
-      <div className="journey-backdrop-asset">
-        <img src={twentyfive} alt="" aria-hidden="true" />
-      </div>
-      <div className="journey-backdrop-overlay"></div>
 
       <div className="journey-slider-container">
         <div className="journey-stage">
