@@ -1,129 +1,79 @@
-import React, { useEffect } from "react";
 import "./RSChoyal.css";
 
-import industrialist from "../../assets/industrialist.webp";
-import innovator from "../../assets/innovator.webp";
-import author from "../../assets/author.webp";
-import motivator from "../../assets/motivator.webp";
+import director from "../../assets/author.webp";
+import factory from "../../assets/vibhuti.jpg";
 
 export default function Director() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    const sections = document.querySelectorAll(".rs-theater-frame");
-    sections.forEach((sec) => observer.observe(sec));
-
-    return () => sections.forEach((sec) => observer.unobserve(sec));
-  }, []);
-
-  const profiles = [
-    {
-      role: "Industrialist",
-      image: industrialist,
-      lines: [
-        "Built a globally recognized industrial ecosystem in flour milling, engineering, and food processing technologies.",
-        "Established scalable manufacturing systems and expanded operations across multiple countries, making the Choyal Group a trusted global name.",
-      ],
-    },
-    {
-      role: "Innovator",
-      image: innovator,
-      lines: [
-        "Introduced breakthrough technologies such as Wonder Mill, automated milling systems, and energy-efficient grinding solutions.",
-        "Focused on reducing operational costs, increasing efficiency, and bringing digital transformation into traditional milling processes.",
-      ],
-    },
-    {
-      role: "Author",
-      image: author,
-      lines: [
-        "Authored books on leadership, personality development, motivation, and industrial growth.",
-        "His writings focus on discipline, mindset transformation, and practical success principles for students, entrepreneurs, and professionals.",
-      ],
-    },
-    {
-      role: "Motivator",
-      image: motivator,
-      lines: [
-        "A widely respected speaker and mentor who has addressed thousands of students, entrepreneurs, and industry professionals across India and abroad.",
-        "His seminars focus on mindset building, leadership development, and unlocking human potential.",
-      ],
-    },
-  ];
-
   return (
-    <div className="rs-theater-wrapper">
-      <main className="rs-theater-main-content">
-        {profiles.map((profile, index) => (
-          <section key={profile.role} className="rs-theater-frame">
-            <div className="rs-theater-container">
-              <div
-                className={`rs-theater-grid ${index % 2 !== 0 ? "is-reversed" : ""}`}
-              >
-                <div className="rs-theater-image-side">
-                  <img
-                    src={profile.image}
-                    alt={profile.role}
-                    className="rs-theater-big-photo"
-                  />
-                </div>
+    <div className="director-page">
 
-                <div className="rs-theater-text-side">
-                  <span className="rs-theater-tagline">ABOUT OUR DIRECTOR</span>
-                  <h2 className="rs-theater-heading">{profile.role}</h2>
+      {/* ABOUT DIRECTOR */}
 
-                  <div className="rs-theater-paragraphs">
-                    {profile.lines.map((textLine, lineIdx) => (
-                      <p key={lineIdx}>{textLine}</p>
-                    ))}
-                  </div>
-                </div>
-                <div className="rs-theater-text-side">
-                  <span className="rs-theater-tagline">ABOUT OUR DIRECTOR</span>
-                  <h2 className="rs-theater-heading">{profile.role}</h2>
-                  <div className="rs-theater-paragraphs">
-                    {profile.lines.map((textLine, lineIdx) => (
-                      <p key={lineIdx}>{textLine}</p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        ))}
+      <section className="director-section">
+        <div className="director-container">
 
-        <section className="rs-theater-impact">
-          <div className="rs-theater-container">
-            <div className="rs-impact-grid">
-              <div className="rs-impact-card">
-                <h3>1992</h3>
-                <p>Joined Choyal Group</p>
-              </div>
-              <div className="rs-impact-card">
-                <h3>Global</h3>
-                <p>Industry Expansion</p>
-              </div>
-              <div className="rs-impact-card">
-                <h3>Innovation</h3>
-                <p>Core Philosophy</p>
-              </div>
-              <div className="rs-impact-card">
-                <h3>Leadership</h3>
-                <p>Industry Influence</p>
-              </div>
-            </div>
+          <div className="director-image">
+            <img src={director} alt="Director" />
           </div>
-        </section>
-      </main>
+
+          <div className="director-content">
+
+            <span className="director-subtitle">
+              ABOUT DIRECTOR
+            </span>
+
+            <h2>Mr. R. S. Choyal</h2>
+
+            <p>
+              R.S. Choyal is the driving force behind RS Choyal Group's transformation of the milling industry. Over decades, he has led 275+ turnkey projects and established food parks and processing plants across the globe. Beyond business, he is a TEDx speaker who shares his journey on entrepreneurship and personal growth, and remains focused on strengthening the milling industry while helping others reach their own potential.
+              <br/>
+            <span className="bold-text">Know more about RS Choyal:</span>
+             <a
+    href=" https://www.rschoyal.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: 'blue', textDecoration: 'none' }}
+
+  >
+     https://www.rschoyal.com
+  </a>{" "}
+            </p>
+                    
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ABOUT CHOYAL */}
+
+      <section className="director-section">
+
+        <div className="director-container reverse">
+
+          <div className="director-content">
+
+            <span className="director-subtitle">
+              ABOUT MANAGER
+            </span>
+
+            <h2>Vibhuti Choyal</h2>
+
+            <p>
+              Vibhuti Choyal brings a design-led, global perspective to the Choyal legacy. She holds a Master's degree from the Glasgow School of Art and has worked across service design, UX, and innovation — including roles at Designit and on projects spanning fintech and defense-tech UX in the UK. Within the family business, she served as Manager at RS Choyal Group, and went on to found Floura, a farm-to-table fresh flour venture built on Choyal's patented fresh-flour grinding and vending technology, producing custom-ground flour in as little as 6 minutes. She is also a Director at Mavian Agritech Ltd, an Advisory Board Member at IAMTHECODE Foundation, and a Curator with the Global Shapers Community (World Economic Forum), Ajmer Hub.
+Her work bridges Choyal's six decades of milling engineering with modern design thinking — bringing the same product and user-experience rigor to ProMiller's digital tools that she's applied across international design and innovation projects.
+
+            </p>
+          </div>
+
+          <div className="director-image">
+            <img src={factory} alt="Factory" />
+          </div>
+
+        </div>
+
+      </section>
+
     </div>
   );
 }

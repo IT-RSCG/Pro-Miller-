@@ -43,7 +43,7 @@ export default function AboutUs() {
         {/* ---------- TOP SECTION ---------- */}
         <div className="about-top">
           <div className="about-content">
-            <h2 className="about-title">ABOUT PROMILLER</h2>
+            <h2 className="about-title">About Promiller</h2>
 
             <div className="about-title-line"></div>
 

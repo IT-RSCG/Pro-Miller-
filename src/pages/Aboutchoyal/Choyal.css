@@ -2,9 +2,12 @@
   position: relative;
   min-height: auto;
   overflow: hidden;
-  background:  #f7f5ef;
+  background:  #fff;
   color: #101713;
   isolation: isolate;
+}
+.bold-text{
+  font-weight:700;
 }
 
 .journey-backdrop-asset {
@@ -92,12 +95,15 @@
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
+  aspect-ratio: 16 / 9;
+  border:3px solid #fff;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .journey-stage__free-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   padding: 0;
   background: transparent;
@@ -190,6 +196,57 @@
   background: #ffa8065d;
   transform: translateY(-2px);
 }
+/* ================= ABOUT SECTION ================= */
+
+.journey-about-section{
+  width:100%;
+  padding:80px 0 20px;
+}
+
+.journey-about-container{
+  width:min(1180px, calc(100% - 48px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr minmax(320px,420px);
+  gap:45px;
+  align-items:center;
+}
+
+.journey-about-content{
+  max-width:750px;
+  text-align:justify;
+}
+
+
+.journey-about-title{
+  margin:0 0 18px;
+  font-size:36px;
+  color:#0d5b43;
+  font-family:"Lato",sans-serif;
+  font-weight:700;
+}
+
+.journey-about-text{
+  color:#101713;
+  font-size:16px;
+  line-height:1.8;
+  font-family:"Lato",sans-serif;
+}
+
+.journey-about-image{
+  width:100%;
+  height:340px;
+  overflow:hidden;
+   border:3px solid #fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.15); 
+}
+
+.journey-about-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 @media (max-width:900px){
 
   .journey-slider-container{
@@ -271,6 +328,26 @@
   .journey-nav-arrows{
     justify-content:center;
   }
+  .journey-about-container{
+  grid-template-columns:1fr;
+  text-align:center;
+  gap:30px;
+}
+
+.journey-about-content{
+  max-width:100%;
+}
+
+.journey-about-title{
+  font-size:36px;
+}
+
+.journey-about-image{
+  max-width:420px;
+  width:100%;
+  margin:auto;
+  height:320px;
+}
 
 }
 
@@ -287,7 +364,7 @@
   }
 
   .journey-stage__subtitle{
-    font-size:13px;
+    font-size:15px;
     letter-spacing:3px;
   }
 
@@ -296,18 +373,19 @@
   }
 
   .journey-stage__title{
-    font-size:24px;
+    font-size:20px;
   }
 
   .journey-stage__desc{
-    font-size:14px;
+    font-size:15px;
     line-height:1.7;
   }
 
   .journey-stage__media{
     width:100%;
-    max-width:280px;
+    max-width:680px;
     margin:auto;
+    object-fit:cover;
   }
 
   .journey-timeline-track{
@@ -350,6 +428,23 @@
     height:44px;
     font-size:22px;
   }
+  .journey-about-section{
+  padding:50px 0 15px;
+}
+
+.journey-about-title{
+  font-size:20px;
+}
+
+.journey-about-text{
+  font-size:15px;
+  line-height:1.7;
+  text-align:justify;
+}
+
+.journey-about-image{
+  height:220px;
+}
 
 }
 
@@ -368,7 +463,9 @@
   }
 
   .journey-stage__media{
-    max-width:240px;
+    height:220px;
+    object-fit:contain;
+    max-width:380px;
   }
 
   .nav-arrow{

@@ -14,31 +14,56 @@ const NAV_ITEMS = [
       { label: "About RS Choyal Group", path: "/about-rs-choyal-group" },
       { label: "About Director", path: "/director" },
       { label: "About Mavian Pro Miller", path: "/mavian" },
-      { label: "About CSMT", path: "/mavian" },
-      { label: "About Charge", path: "/mavian" },
+      { label: "About CSMT", path: "/csmt" },
+      { label: "About Charge", path: "/charge" },
     ],
   },
+
   {
     label: "Products and Services",
+    path:"/products-services"
   },
+
   {
     label: "Technologies",
-    dropdown: [
-      { label: "Wonder Mill", path: "/technologies/WonderMill" },
-      { label: "Wonder Miller", path: "/technologies/WonderMiller" },
-      { label: "Neo Matic", path: "/technologies/NeoMatic" },
-      { label: "Emery Stone Dresser", path: "/technologies/EmeryStoneDresser" },
-      { label: "Floura", path: "/technologies/Floura" },
-      { label: "iQuadra", path: "/technologies/IQuadra" },
-    ],
+    path:"/technologies"
+    // dropdown: [
+    //   {
+    //     label: "Wonder Mill",
+    //     path: "/technologies#wonder-mill",
+    //   },
+    //   {
+    //     label: "Wonder Miller",
+    //     path: "/technologies#wonder-miller",
+    //   },
+    //   {
+    //     label: "Neo Matic",
+    //     path: "/technologies#neo-matic",
+    //   },
+    //   {
+    //     label: "Emery Stone Dresser",
+    //     path: "/technologies#emery-stone-dresser",
+    //   },
+    //   {
+    //     label: "Floura",
+    //     path: "/technologies#floura",
+    //   },
+    //   {
+    //     label: "iQuadra",
+    //     path: "/technologies#iquadra",
+    //   },
+    // ],
   },
-  {
-  label: "Operations",
-  path: "/operations",
-  },
-  { label: "Modules" },
-];
 
+  {
+    label: "Operations",
+    path: "/operations",
+  },
+
+  {
+    label: "Modules",
+  },
+];
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);

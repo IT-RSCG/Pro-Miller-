@@ -80,15 +80,13 @@
   opacity: 0.5;
 }
 
-/* --- Responsive Topbar Content handling --- */
+
 @media (max-width: 480px) {
-  /* Instead of deleting links, we hide the plain text labels 
-     so just the icons stay cleanly visible side-by-side */
   .navbar__contact-link span {
     display: none;
   }
   .navbar__topbar-left {
-    gap: 16px; /* slightly more space for finger-taps */
+    gap: 16px; 
   }
 }
 
@@ -161,7 +159,8 @@
   border: none;
   cursor: pointer;
   color: var(--color-ink);
-  font-size: 13.5px;
+  font-size: 15px;
+  font-family:"Lato",sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   padding: 25px 0;
@@ -230,9 +229,6 @@
   background: #faf8f5;
 }
 
-/* ==========================================================================
-   MOBILE INTERACTION ELEMENTS (BURGER & TRANSFORMS)
-   ========================================================================== */
 .navbar__burger {
   display: none;
   flex-direction: column;
@@ -264,9 +260,6 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ==========================================================================
-   MOBILE INTERFACE DRAWER OVERLAY
-   ========================================================================== */
 .navbar__mobile {
   position: fixed;
   top: 0;
@@ -304,6 +297,7 @@
   text-align: left;
   padding: 16px 0;
   font-size: 15px;
+  font-family:"Lato",sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--color-ink);
@@ -321,14 +315,12 @@
 .navbar__mobile .navbar__dropdown-link {
   display: block;
   padding: 12px 0;
-  font-size: 14px;
+  font-family:"Lato",sans-serif;
+  font-size: 15px;
   color: var(--color-ink-soft);
   border-bottom: 1px solid var(--color-rule);
 }
 
-/* ==========================================================================
-   RESPONSIVE LAYOUT BREAKPOINT
-   ========================================================================== */
 @media (max-width: 900px) {
   .navbar {
     padding: 0 18px;

@@ -1,6 +1,6 @@
 .mavian-scroll-container {
   position: relative;
-  background:red;
+  background: #fafafa;
   isolation: isolate;
    transition: 0.6s ease;
 }
@@ -10,24 +10,22 @@
   position: fixed;
   inset: 0;
   z-index: -2;
+  background-image: var(--factory-src);
   background-size: cover;
   background-position: center;
-  background:red;
   opacity: 0.12;
 
 
 }
-.extra_text{
-  font-style:italic;
-}
-
 .mavian-scroll-container::after {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
   background: rgba(247, 245, 239, 0.9);
-
+}
+.bold-text{
+    font-weight:700;
 }
 
 .mavian-main-content {
@@ -50,6 +48,8 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Professional Image */
 
 .mavian-image-panel {
   overflow: hidden;

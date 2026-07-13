@@ -2,7 +2,7 @@
 :root {
   --orbit-capsule-width: 320px;
   --orbit-capsule-padding: 14px 22px;
-  --orbit-title-size: 16px;
+  --orbit-title-size: 15px;
   --orbit-desc-display: flex; 
   --orbit-icon-size: 44px;
 }
@@ -11,19 +11,19 @@
   :root {
     --orbit-capsule-width: 240px;
     --orbit-capsule-padding: 10px 14px;
-    --orbit-title-size: 14px;
+    --orbit-title-size: 15px;
     --orbit-icon-size: 36px;
   }
 }
 
-/* Hard conversion for mobile screens */
+
 @media (max-width: 600px) {
   :root {
-    /* Shrink down the badges so they don't clip off-screen */
+
     --orbit-capsule-width: auto; 
     --orbit-capsule-padding: 8px 12px;
     --orbit-title-size: 12px;
-    --orbit-desc-display: none; /* Hide descriptions to maximize layout space */
+    --orbit-desc-display: none; 
     --orbit-icon-size: 28px;
   }
 }
