@@ -1,77 +1,67 @@
-.tech-page {
+.products-section {
   background: #fff;
-  padding-bottom: 70px;
+  padding: 70px 0;
 }
 
-.tech-header {
-  width: min(900px, 90%);
-  margin: 0 auto;
-  padding: 50px 0;
-  text-align: center;
-  color: #11452b;
-}
-
-.tech-header h1 {
-  font-size: 36px;
-  margin-bottom: 16px;
-  font-family: "Lato", sans-serif;
-  color: #11452b;
-}
-
-.tech-header p {
-  max-width: 760px;
-  margin: 0 auto;
-  line-height: 1.8;
-  font-size: 15px;
-  font-family: "Lato", sans-serif;
-}
-
-/* GRID */
-
-.tech-grid {
+.container {
   width: min(1250px, 92%);
   margin: auto;
+}
 
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: #11452b;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #555;
+  font-family: "Lato", sans-serif;
+}
+
+.products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
 }
-
-/* CARD */
-
-.tech-card {
+.product-card {
   background: #fff;
   border-radius: 18px;
   overflow: hidden;
 
   border: 1px solid rgba(0, 0, 0, 0.08);
-
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
-
   transition: all 0.35s ease;
 
   display: flex;
   flex-direction: column;
 }
 
-.tech-card:hover {
+.product-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
 }
 
-.tech-card-image {
+.product-image {
   height: 260px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
+  object-fit:contain;
   padding: 25px;
 
   background: #fafafa;
 }
 
-.tech-card-image img {
+.product-image img {
   width: 100%;
   max-width: 220px;
   max-height: 220px;
@@ -81,50 +71,165 @@
   transition: transform 0.35s ease;
 }
 
-.tech-card:hover img {
+.product-card:hover .product-image img {
   transform: scale(1.05);
 }
 
-.tech-card-content {
+.product-content {
   padding: 24px;
 }
 
-.tech-card-content h2 {
+.product-content h2 {
   font-size: 20px;
   color: #11452b;
   font-family: "Lato", sans-serif;
-  font-weight: 700;
   margin-bottom: 16px;
+  line-height: 1.4;
 }
 
-.tech-card-content p {
+.product-content p {
   font-size: 15px;
   line-height: 1.9;
-  color: black;
+  color: #222;
   font-family: "Lato", sans-serif;
 }
 
-/* Tablet */
+/* Hide button on Desktop */
 
-@media (max-width: 1000px) {
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.read-more-btn {
+  display: none;
 }
 
-/* Mobile */
 
-@media (max-width: 700px) {
-  .tech-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 992px) {
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
-  .tech-card-image {
+  .product-image {
     height: 220px;
   }
 
-  .tech-card-image img {
+  .product-image img {
     max-width: 180px;
     max-height: 180px;
   }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .products-section {
+    padding: 55px 0;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 35px;
+    line-height: 1.7;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .product-image {
+    height: 140px;
+    padding: 12px;
+  }
+
+  .product-image img {
+    max-width: 105px;
+    max-height: 105px;
+  }
+
+  .product-content {
+    padding: 14px;
+  }
+
+  .product-content h2 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .product-content p {
+    font-size: 12px;
+    line-height: 1.55;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+  }
+
+  .product-content p.expanded {
+    display: block;
+  }
+
+  .read-more-btn {
+    display: inline-block;
+
+    margin-top: 8px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #11452b;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 13px;
+  }
+
+  .product-image {
+    height: 180px;
+  }
+
+  .product-image img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+
+  .product-content {
+    padding: 18px;
+  }
+
+  .product-content h2 {
+    font-size: 17px;
+  }
+
+  .product-content p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
 }
