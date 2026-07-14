@@ -1,5 +1,9 @@
 import "./footer.css";
 import logo from "../../../assets/logo1.webp";
+import CallIcon from '@mui/icons-material/Call';
+import MailIcon from '@mui/icons-material/Mail';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LanguageIcon from "@mui/icons-material/Language";
 
 
 export default function Footer() {
@@ -19,43 +23,50 @@ export default function Footer() {
         <div className="footer__column">
           <h3>Quick Links</h3>
           <ul>
-            <li>Products</li>
-            <li>Services</li>
+            <li>Products and Services</li>
             <li>Technologies</li>
             <li>Operations</li>
-            <li>Contact Us</li>
+            <li>Modules</li>
           </ul>
         </div>
+<div className="footer__column">
+  <h3>Locations & Contact</h3>
 
-        <div className="footer__column">
-          <h3>Services</h3>
-          <ul>
-            <li>Turnkey Flour Mills</li>
-            <li>Plant Automation</li>
-            <li>Consultancy</li>
-            <li>Maintenance</li>
-            <li>Training</li>
-          </ul>
-        </div>
+  <div className="footer__contact-item">
+    <LocationOnIcon className="footer__icon" />
+    <div>
+      <strong>Corporate Headquarters</strong>
+      <p>
+        Choyal Tower 1180/28, Shalimar Colony, Adarsh Nagar, Ajmer, Rajasthan 305008
+      </p>
+    </div>
+  </div>
 
-        <div className="footer__column">
-          <h3>Newsletter</h3>
+  <div className="footer__contact-item">
+    <LocationOnIcon className="footer__icon" />
+    <div>
+      <strong>Factory Unit</strong>
+      <p>
+        Arjunpura – Khalsa, Distt. Ajmer (Raj.)
+      </p>
+    </div>
+  </div>
 
-          <p>
-            Subscribe to receive updates, insights and upcoming industry
-            innovations from Promiller.
-          </p>
+  <div className="footer__contact-link">
+    <CallIcon className="footer__icon" />
+    <span>+91 92402 89259</span>
+  </div>
 
-          <form className="footer__form">
-            <input
-              type="email"
-              placeholder="Enter your email"
-            />
-            <button type="submit">
-              Subscribe Now
-            </button>
-          </form>
-        </div>
+  <div className="footer__contact-link">
+    <MailIcon className="footer__icon" />
+    <span>info@promiller.com</span>
+  </div>
+
+  <div className="footer__contact-link">
+    <LanguageIcon className="footer__icon" />
+    <span>www.promiller.com</span>
+  </div>
+</div>
 
       </div>
 
@@ -64,8 +75,8 @@ export default function Footer() {
           © Copyright Promiller. All Rights Reserved.
         </div>
         <div className="footer__logo">
-            <img src={logo} alt="Promiller Logo" />
-          </div>
+          <img src={logo} alt="Promiller Logo" />
+        </div>
       </div>
     </footer>
   );
