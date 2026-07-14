@@ -5,6 +5,7 @@ import product2 from "../../assets/WonderMiller.webp";
 import product3 from "../../assets/wondermiller.png";
 import product4 from "../../assets/emerystonedresser.png";
 import product5 from "../../assets/new4.webp";
+import banner from "../../assets/WonderMill.webp";
 
 const products = [
   {
@@ -72,14 +73,25 @@ function ProductCard({ product }) {
 function Services() {
   return (
     <section className="products-section">
+      <div className="tech-hero">
+  <img src={banner} alt="Patented Innovations" />
+
+  <div className="tech-overlay">
+    <span className="tech-tag">
+      PATENTED TECHNOLOGY
+    </span>
+
+    <h1>Our 6 Patented Innovations</h1>
+
+    <p>
+      Since establishing India's first dedicated R&D centre for flour milling in
+      2012, RS Choyal Group has registered 6 patented technologies, each solving
+      a real, recurring problem millers face.
+    </p>
+  </div>
+</div>
       <div className="container">
-        <h1 className="section-title">Our 6 Patented Innovations
-</h1>
-
-        <p className="section-subtitle">
-          Since establishing India's first dedicated R&D centre for flour milling in 2012, RS Choyal Group has registered 6 patented technologies, each solving a real, recurring problem millers face.
-
-        </p>
+        
 
         <div className="products-grid">
           {products.map((product) => (

@@ -1,41 +1,26 @@
-import React, { useEffect } from "react";
 import "./csmt.css";
-
 import csmt from "../../assets/csmt.webp";
 
 export default function Mavian() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    const sections = document.querySelectorAll(".mavian-scroll-section");
-    sections.forEach((sec) => observer.observe(sec));
-
-    return () => sections.forEach((sec) => observer.unobserve(sec));
-  }, []);
-
   return (
-    <main className="mavian-main-content">
-      <section className="mavian-scroll-section split-layout">
-        <div className="mavian-image-panel">
-          <img src={csmt} alt="Mavian ProMiller" />
-        </div>
+    <div className="mavian-page">
+      <section className="mavian-section">
+        <div className="mavian-container">
 
-        <div className="mavian-premium-content">
-          <span className="mavian-tag">ABOUT CSMT</span>
+          <div className="mavian-image">
+            <img src={csmt} alt="Mavian ProMiller" />
+          </div>
 
-          <h2>Choyal School Of Milling Technology</h2>
+          <div className="mavian-content">
 
-          <p>
-            CSMT (Choyal School of Milling Technology) is a premier institute
+            <span className="mavian-subtitle">
+              ABOUT CSMT
+            </span>
+
+            <h2>Choyal School of Milling Technology</h2>
+
+            <p>
+             CSMT (Choyal School of Milling Technology) is a premier institute
             dedicated to technical education, skill development, and
             professional training in Flour Milling and Grain Processing.
             Operating under the guidance of Choyal Grinding Solution Private
@@ -59,9 +44,13 @@ export default function Mavian() {
             >
               https://www.csmt.in
             </a>{" "}
-          </p>
+
+            </p>
+
+          </div>
+
         </div>
       </section>
-    </main>
+    </div>
   );
 }

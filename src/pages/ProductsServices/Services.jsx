@@ -7,6 +7,7 @@ import product4 from "../../assets/wondermiller.png";
 import product5 from "../../assets/new4.webp";
 import product6 from "../../assets/AMC.jpg";
 import product7 from "../../assets/saas.jpg";
+import banner from "../../assets/WonderMill.webp";
 
 const products = [
   {
@@ -87,22 +88,32 @@ function ProductCard({ product }) {
 function Services() {
   return (
     <section className="products-section">
-      <div className="container">
-        <h1 className="section-title">Products & Services</h1>
 
-        <p className="section-subtitle">
-          ProMiller's product range gives you a clear path: start with the core
-          WonderMill upgrade, add the digital tools that matter to you, and keep
-          the system running with ongoing support.
-        </p>
+  <div className="services-hero">
+    <img src={banner} alt="Products & Services" />
 
-        <div className="products-grid">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="services-overlay">
+      <span className="services-tag">PRODUCTS & SERVICES</span>
+
+      <h1>Products & Services</h1>
+
+      <p>
+        ProMiller's product range gives you a clear path: start with the core
+        WonderMill upgrade, add the digital tools that matter to you, and keep
+        the system running with ongoing support.
+      </p>
+    </div>
+  </div>
+
+  <div className="container">
+    <div className="products-grid">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </div>
+  </div>
+
+</section>
   );
 }
 

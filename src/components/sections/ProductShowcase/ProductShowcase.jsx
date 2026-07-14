@@ -1,7 +1,7 @@
 // import React from 'react';
 // import './ProductShowcase.css';
-// import cash from './assets/cash.jpeg';
-// import year from './assets/year.png';
+// import cash from './assets/cash.jpeg'; 
+// import year from './assets/year.png'; 
 // import lapphone from './assets/lapphone.png';
 
 // const ProductShowcase = () => {
@@ -41,8 +41,8 @@
 //         <div className="mm-cash-container">
 //           <h2 className="mm-cash-title">Zero Impact on Your Existing Cash Flow</h2>
 //           <p className="mm-cash-desc">
-//             With ProMiller, your current cash flow remains fully protected. You will never pay more
-//             than what you are already spending—our earnings come only from the additional
+//             With ProMiller, your current cash flow remains fully protected. You will never pay more 
+//             than what you are already spending—our earnings come only from the additional 
 //             value and profit we create for you.
 //           </p>
 //         </div>
@@ -57,7 +57,7 @@
 //           <div className="mm-assurance-text-side">
 //             <h2 className="mm-assurance-title">60+ Years of Trusted Performance Assurance</h2>
 //             <p className="mm-assurance-desc">
-//               ProMiller stands behind its technology with long-term reliability,
+//               ProMiller stands behind its technology with long-term reliability, 
 //               delivering consistent performance and dependable system support for decades.
 //             </p>
 //           </div>
@@ -79,71 +79,108 @@ import year from "../../../assets/year.webp";
 const ProductShowcase = () => {
   return (
     <section className="pm-section">
+
       {/* Background Elements */}
       <div className="pm-bg-circle pm-circle-one"></div>
       <div className="pm-bg-circle pm-circle-two"></div>
 
       <div className="pm-container">
+
         {/* Heading */}
         <div className="pm-heading">
-          <div className="pm-brand-row">
-            <h2 className="pm-brand">Mavian</h2>
 
-            <span className="pm-badge">Pro Miller</span>
+          <div className="pm-brand-row">
+
+            <h2 className="pm-brand">
+              Mavian
+            </h2>
+
+            <span className="pm-badge">
+              Pro Miller
+            </span>
+
           </div>
 
           <p className="pm-subtitle">
             Revolutionizing Flour Mill Management with intelligent automation,
             production insights and decades of engineering excellence.
           </p>
+
         </div>
 
         {/* Showcase */}
         <div className="pm-showcase">
+
           {/* Left Card */}
           <div className="pm-card pm-card-left">
-            <div className="pm-icon green">₹</div>
 
-            <h3>Zero Impact on Cash Flow</h3>
+            <div className="pm-icon green">
+              ₹
+            </div>
+
+            <h3>
+              Zero Impact on Cash Flow
+            </h3>
 
             <p>
-              You never pay more than what you're already spending. Our success
-              comes only from the additional value we create.
+              You never pay more than what you're already spending.
+              Our success comes only from the additional value we create.
             </p>
+
           </div>
 
           {/* Center Image */}
           <div className="pm-device">
+
             <div className="pm-glow"></div>
 
-            <img src={laptop} alt="Mavian Pro Miller" />
+            <img
+              src={laptop}
+              alt="Mavian Pro Miller"
+            />
+
           </div>
 
           {/* Right Card */}
           <div className="pm-card pm-card-right">
-            <div className="pm-icon orange">%</div>
 
-            <h3>Revenue Sharing Model</h3>
+            <div className="pm-icon orange">
+              %
+            </div>
+
+            <h3>
+              Revenue Sharing Model
+            </h3>
 
             <p>
-              We grow together. Our earnings are directly tied to the additional
-              profitability generated for your mill.
+              We grow together. Our earnings are directly tied to the
+              additional profitability generated for your mill.
             </p>
+
           </div>
+
         </div>
 
         {/* Bottom Card */}
 
         <div className="pm-bottom-card">
+
           <div className="pm-bottom-left">
-            <img src={year} alt="60 Years" />
+
+            <img
+              src={year}
+              alt="60 Years"
+            />
+
           </div>
 
           <div className="pm-bottom-right">
-            <h3 className="pm-title">TRUSTED PERFORMANCE</h3>
 
-            <div className="pm-title-line"></div>
-            <h2>60+ Years of Engineering Excellence</h2>
+            <h2>
+              60+ Years of Trusted Performance
+            </h2>
+
+            <div className="pm-heading-line"></div>
 
             <p>
               Built on decades of milling expertise, Pro Miller combines
@@ -151,9 +188,13 @@ const ProductShowcase = () => {
               achieve higher productivity, improved efficiency and long-term
               sustainable growth.
             </p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 };

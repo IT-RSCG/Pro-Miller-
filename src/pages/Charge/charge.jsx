@@ -1,43 +1,27 @@
-import React, { useEffect } from "react";
 import "./charge.css";
-
 import WonderMillImg from "../../assets/charge.png";
 
 export default function Mavian() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    const sections = document.querySelectorAll(".mavian-scroll-section");
-    sections.forEach((sec) => observer.observe(sec));
-
-    return () => sections.forEach((sec) => observer.unobserve(sec));
-  }, []);
-
   return (
-    <main className="mavian-main-content">
-      <section className="mavian-scroll-section split-layout">
-        <div className="mavian-image-panel">
-          <img src={WonderMillImg} alt="Mavian ProMiller" />
-        </div>
+    <div className="mavian-page">
+      <section className="mavian-section">
+        <div className="mavian-container">
 
-        <div className="mavian-premium-content">
-          <span className="mavian-tag">ABOUT CHARGE</span>
+          <div className="mavian-image">
+            <img src={WonderMillImg} alt="Mavian ProMiller" />
+          </div>
 
-          <h2>
-            Choyal Hub for Agribusiness, Research, Growth & Entrepreneurship
-          </h2>
+          <div className="mavian-content">
 
-          <p>
-            CHARGE (Choyal Hub for Agribusiness, Research, Growth &
+            <span className="mavian-subtitle">
+              ABOUT  CHARGE
+            </span>
+
+            <h2>Choyal Hub for Agribusiness, Research, Growth &
+            Entrepreneurship</h2>
+
+            <p>
+              CHARGE (Choyal Hub for Agribusiness, Research, Growth &
             Entrepreneurship) is the evolved form of CSMT (Choyal School of
             Milling Technology), established to create skilled professionals and
             entrepreneurs for the agribusiness and food processing industry. A
@@ -60,9 +44,13 @@ export default function Mavian() {
             >
               https://charge.org.in
             </a>{" "}
-          </p>
+
+            </p>
+
+          </div>
+
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -166,7 +166,7 @@
 .pm-card p {
   color: black;
   line-height: 1.8;
-  font-size:15px;
+  font-size:13px;
   font-family:"Lato",sans-serif;
 }
 
@@ -315,22 +315,6 @@
     letter-spacing:.08em;
     margin-bottom:14px;
 } */
-
-.pm-title{
-    margin:0;
-    color: #0d5b43;
-    font-family:"Lato",sans-serif;
-    font-size:20px;
-    font-weight:600;
-    line-height:1;
-}
-
-.pm-title-line{
-    width:100%;
-    height:1px;
-    background:#d8d8d8;
-    margin:14px 0 18px;
-}
 .pm-bottom-right h2 {
   margin: 0;
   color:#0b5b42;
@@ -341,7 +325,7 @@
 }
 
 .pm-heading-line {
-  width: 100px;
+  width: 10   0px;
   height: 3px;
   background: #000;
   margin: 16px 0 22px;
@@ -368,6 +352,16 @@
 
     font-weight:600;
 }
+
+.pm-bottom-right p{
+
+    margin:0;
+    color:black;
+    font-size:15.5px;
+    line-height:1.8;
+    max-width:720px;
+}
+
 /* ==========================================================
    CARD ANIMATIONS
 ========================================================== */

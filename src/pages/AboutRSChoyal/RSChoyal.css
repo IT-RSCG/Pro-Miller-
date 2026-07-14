@@ -45,7 +45,7 @@
 .director-image img{
     width:100%;
     display:block;
-    border:8px solid #fff;
+    border:3px solid #fff;
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 .director-image:hover img {
@@ -54,21 +54,21 @@
 
 .director-subtitle{
     color:#ff7800;
-    font-size:14px;
+    font-size:15px;
     font-weight:700;
     letter-spacing:4px;
     text-transform:uppercase;
 }
 
 .director-content h2{
-    font-size:42px;
+    font-size:36px;
     color:#0d5b43;
     margin:10px 0 25px;
     font-family:"Lato",sans-serif;
 }
 
 .director-content p{
-    font-size:16px;
+    font-size:15px;
     line-height:1.9;
     color:#222;
     margin-bottom:22px;
