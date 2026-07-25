@@ -1,5 +1,5 @@
 import "./charge.css";
-import WonderMillImg from "../../assets/charge.png";
+import WonderMillImg from "../../assets/charge.JPG";
 
 export default function Mavian() {
   return (
@@ -35,15 +35,17 @@ export default function Mavian() {
             skill-oriented technical education and sustainable industry growth
             from its training centre in Arjunpura, Ajmer, Rajasthan.
             <br />
-            <span className="bold-text">Know more about CHARGE:</span>
-            <a
-              href="  https://charge.org.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "blue", textDecoration: "none" }}
-            >
-              https://charge.org.in
-            </a>{" "}
+            <br/>
+            
+              <a
+                href=" https://charge.org.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="director-btn"
+              >
+                Know More 
+              </a>
+
 
             </p>
 

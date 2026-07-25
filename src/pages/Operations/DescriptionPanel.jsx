@@ -1,56 +1,56 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+// import React from "react";
+// import { motion, AnimatePresence } from "framer-motion";
 
-const DescriptionPanel = ({ step }) => {
-  return (
-    <div className="description-wrapper">
+// const DescriptionPanel = ({ step }) => {
+//   return (
+//     <div className="description-wrapper">
 
-      <AnimatePresence mode="wait">
+//       <AnimatePresence mode="wait">
 
-        <motion.div
-          key={step.id}
-          className="description-panel"
-          initial={{
-            opacity: 0,
-            y: 25
-          }}
-          animate={{
-            opacity: 1,
-            y: 0
-          }}
-          exit={{
-            opacity: 0,
-            y: -25
-          }}
-          transition={{
-            duration: 0.5
-          }}
-        >
+//         <motion.div
+//           key={step.id}
+//           className="description-panel"
+//           initial={{
+//             opacity: 0,
+//             y: 25
+//           }}
+//           animate={{
+//             opacity: 1,
+//             y: 0
+//           }}
+//           exit={{
+//             opacity: 0,
+//             y: -25
+//           }}
+//           transition={{
+//             duration: 0.5
+//           }}
+//         >
 
-          <span className="description-step">
+//           <span className="description-step">
 
-            STEP {String(step.id).padStart(2, "0")}
+//             STEP {String(step.id).padStart(2, "0")}
 
-          </span>
+//           </span>
 
-          <h2>
+//           <h2>
 
-            {step.title}
+//             {step.title}
 
-          </h2>
+//           </h2>
 
-          <p>
+//           <p>
 
-            {step.description}
+//             {step.description}
 
-          </p>
+//           </p>
 
-        </motion.div>
+//         </motion.div>
 
-      </AnimatePresence>
+//       </AnimatePresence>
 
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
 
-export default DescriptionPanel;
+// export default DescriptionPanel;

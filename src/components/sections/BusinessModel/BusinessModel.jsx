@@ -87,8 +87,18 @@ const orbitItems = [
   },
 ];
 
-const ORBIT_RADIUS = 200;
 const SPEED = 0.3;
+
+const getOrbitRadius = () => {
+  const width = window.innerWidth;
+
+  if (width <= 360) return 95;
+  if (width <= 480) return 110;
+  if (width <= 768) return 130;
+  if (width <= 1024) return 160;
+
+  return 200;
+};
 
 export default function BusinessModel() {
   const angleRef = useRef(0);
@@ -96,6 +106,19 @@ export default function BusinessModel() {
 
   const [paused, setPaused] = useState(false);
   const [positions, setPositions] = useState([]);
+  const [orbitRadius, setOrbitRadius] = useState(getOrbitRadius());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setOrbitRadius(getOrbitRadius());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const count = orbitItems.length;
@@ -116,8 +139,8 @@ export default function BusinessModel() {
 
         return {
           ...item,
-          x: Math.cos(rad) * ORBIT_RADIUS,
-          y: Math.sin(rad) * ORBIT_RADIUS,
+          x: Math.cos(rad) * orbitRadius,
+          y: Math.sin(rad) * orbitRadius,
           deg: ((deg % 360) + 360) % 360,
         };
       });
@@ -130,14 +153,16 @@ export default function BusinessModel() {
     rafRef.current = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(rafRef.current);
-  }, [paused]);
+  }, [paused, orbitRadius]);
 
-  const containerSize = (ORBIT_RADIUS + 160) * 2;
+  const containerSize = (orbitRadius + 160) * 2;
 
   return (
     <div className="orbit-page-wrapper">
       <div className="orbit-heading-section">
-        <h1 className="orbit-main-title">Our Business Model</h1>
+        <h1 className="orbit-main-title">
+          Our Business Model
+        </h1>
 
         <p className="orbit-tagline">
           A cyclical framework engineered for shared value and sustainable
@@ -155,8 +180,8 @@ export default function BusinessModel() {
         <div
           className="orbit-track-ring"
           style={{
-            width: ORBIT_RADIUS * 2,
-            height: ORBIT_RADIUS * 2,
+            width: orbitRadius * 2,
+            height: orbitRadius * 2,
           }}
         />
 
@@ -176,11 +201,11 @@ export default function BusinessModel() {
             strokeLinejoin="round"
           />
         </svg>
-
-        {positions.map((item) => {
+                {positions.map((item) => {
           const depthScale =
             0.85 +
-            0.3 * ((Math.sin(((item.deg - 90) * Math.PI) / 180) + 1) / 2);
+            0.3 *
+              ((Math.sin(((item.deg - 90) * Math.PI) / 180) + 1) / 2);
 
           return (
             <div
@@ -196,12 +221,8 @@ export default function BusinessModel() {
                 style={{
                   opacity: 0.45 + depthScale * 0.3,
                 }}
-                onMouseEnter={() => {
-                  setPaused(true);
-                }}
-                onMouseLeave={() => {
-                  setPaused(false);
-                }}
+                onMouseEnter={() => setPaused(true)}
+                onMouseLeave={() => setPaused(false)}
               >
                 <div
                   className="item-icon-circle"
@@ -213,9 +234,13 @@ export default function BusinessModel() {
                 </div>
 
                 <div className="item-text-stack">
-                  <span className="item-text-title">{item.title}</span>
+                  <span className="item-text-title">
+                    {item.title}
+                  </span>
 
-                  <span className="item-text-desc">{item.desc}</span>
+                  <span className="item-text-desc">
+                    {item.desc}
+                  </span>
                 </div>
               </div>
             </div>

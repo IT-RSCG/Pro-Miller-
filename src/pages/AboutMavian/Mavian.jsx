@@ -60,7 +60,7 @@
 // }
 
 import "./Mavian.css";
-import WonderMillImg from "../../assets/WonderMill.webp";
+import WonderMillImg from "../../assets/2026.jpg";
 
 export default function Mavian() {
   return (

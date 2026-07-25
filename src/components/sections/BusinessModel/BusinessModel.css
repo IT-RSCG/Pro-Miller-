@@ -74,21 +74,14 @@
   letter-spacing: 0.2px;
 }
 
-/* ===========================
-   ORBIT CONTAINER
-=========================== */
-
-.orbit-system-container {
-  position: relative;
-  flex: 1;
-  width: 100%;
-  max-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 450px; /* Ensures the layout maintains structural height */
+.orbit-system-container{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:visible;
+min-height:620px;
 }
-
 /* ===========================
    ORBIT TRACK
 =========================== */
@@ -227,46 +220,217 @@ background: linear-gradient(
   display: var(--orbit-desc-display);
 }
 
-@media (max-width: 700px) {
-  .orbit-page-wrapper {
-    min-height: auto;
-    padding: 38px 16px 54px;
-  }
+/* ==========================================================
+   TABLET
+========================================================== */
 
-  .orbit-system-container {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin-top: 24px;
-  }
+@media (max-width:1024px){
 
-  .orbit-track-ring,
-  .center-bolt-svg {
-    display: none;
-  }
+:root{
 
-  .orbiting-node-wrapper {
-    position: static;
-    transform: none !important;
-    z-index: auto !important;
-  }
+--orbit-capsule-width:230px;
+--orbit-capsule-padding:10px 14px;
+--orbit-title-size:13px;
+--orbit-icon-size:34px;
 
-  .orbit-item-capsule {
-    position: static;
-    width: 100%;
-    transform: none;
-    border-radius: 16px;
-    opacity: 1 !important;
-  }
+}
 
-  .orbit-item-capsule:hover {
-    transform: translateY(-2px);
-  }
+.orbit-page-wrapper{
 
-  .item-text-title {
-    white-space: normal;
-  }
+padding:0 18px;
+
+}
+
+.orbit-main-title{
+
+font-size:30px;
+
+}
+
+.orbit-tagline{
+
+font-size:17px;
+
+}
+
+.orbit-system-container{
+
+min-height:560px;
+
+}
+
+.center-bolt-svg{
+
+width:34px;
+height:42px;
+
+}
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+:root{
+
+--orbit-capsule-width:170px;
+--orbit-capsule-padding:8px 12px;
+--orbit-title-size:11px;
+--orbit-icon-size:28px;
+
+}
+
+.orbit-page-wrapper{
+
+padding:0 12px;
+min-height:auto;
+
+}
+
+.orbit-main-title{
+
+font-size:24px;
+
+}
+
+.orbit-tagline{
+
+font-size:15px;
+
+}
+.orbit-system-container{
+
+min-height:430px;
+overflow:visible;
+
+}
+
+.orbit-track-ring{
+
+width:260px !important;
+height:260px !important;
+
+}
+
+.center-bolt-svg{
+
+width:28px;
+height:36px;
+
+}
+
+.item-text-title{
+
+font-size:11px;
+white-space:normal;
+
+}
+
+.item-text-desc{
+
+font-size:10px;
+
+}
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width:480px){
+
+:root{
+
+--orbit-capsule-width:140px;
+--orbit-capsule-padding:7px 10px;
+--orbit-title-size:10px;
+--orbit-icon-size:24px;
+
+}
+
+.orbit-main-title{
+
+font-size:22px;
+
+}
+
+.orbit-tagline{
+
+font-size:14px;
+
+}
+
+.orbit-system-container{
+
+min-height:360px;
+
+}
+
+.orbit-track-ring{
+
+width:220px !important;
+height:220px !important;
+
+}
+
+.center-bolt-svg{
+
+width:24px;
+height:30px;
+
+}
+
+.item-text-stack{
+
+margin-left:8px;
+
+}
+
+.item-text-title{
+
+font-size:10px;
+
+}
+
+.item-text-desc{
+
+display:none;
+
+}
+
+}
+
+
+/* ==========================================================
+   EXTRA SMALL
+========================================================== */
+
+@media (max-width:360px){
+
+:root{
+
+--orbit-capsule-width:120px;
+--orbit-icon-size:20px;
+
+}
+
+.orbit-track-ring{
+
+width:190px !important;
+height:190px !important;
+
+}
+
+.item-text-title{
+
+font-size:9px;
+
+}
+
 }

@@ -29,44 +29,44 @@ export default function Footer() {
             <li>Modules</li>
           </ul>
         </div>
-<div className="footer__column">
-  <h3>Locations & Contact</h3>
+        <div className="footer__column">
+          <h3>Locations & Contact</h3>
 
-  <div className="footer__contact-item">
-    <LocationOnIcon className="footer__icon" />
-    <div>
-      <strong>Corporate Headquarters</strong>
-      <p>
-        Choyal Tower 1180/28, Shalimar Colony, Adarsh Nagar, Ajmer, Rajasthan 305008
-      </p>
-    </div>
-  </div>
+          <div className="footer__contact-item">
+            <LocationOnIcon className="footer__icon" />
+            <div>
+              <strong>Corporate Headquarters</strong>
+              <p>
+                Choyal Tower 1180/28, Shalimar Colony, Adarsh Nagar, Ajmer, Rajasthan 305008
+              </p>
+            </div>
+          </div>
 
-  <div className="footer__contact-item">
-    <LocationOnIcon className="footer__icon" />
-    <div>
-      <strong>Factory Unit</strong>
-      <p>
-        Arjunpura – Khalsa, Distt. Ajmer (Raj.)
-      </p>
-    </div>
-  </div>
+          <div className="footer__contact-item">
+            <LocationOnIcon className="footer__icon" />
+            <div>
+              <strong>Factory Unit</strong>
+              <p>
+                Arjunpura – Khalsa, Distt. Ajmer (Raj.)
+              </p>
+            </div>
+          </div>
 
-  <div className="footer__contact-link">
-    <CallIcon className="footer__icon" />
-    <span>+91 92402 89259</span>
-  </div>
+          <div className="footer__contact-link">
+            <CallIcon className="footer__icon" />
+            <span>+91 92402 89259</span>
+          </div>
 
-  <div className="footer__contact-link">
-    <MailIcon className="footer__icon" />
-    <span>info@promiller.com</span>
-  </div>
+          <div className="footer__contact-link">
+            <MailIcon className="footer__icon" />
+            <span>info@promiller.com</span>
+          </div>
 
-  <div className="footer__contact-link">
-    <LanguageIcon className="footer__icon" />
-    <span>www.promiller.com</span>
-  </div>
-</div>
+          <div className="footer__contact-link">
+            <LanguageIcon className="footer__icon" />
+            <span>www.promiller.com</span>
+          </div>
+        </div>
 
       </div>
 

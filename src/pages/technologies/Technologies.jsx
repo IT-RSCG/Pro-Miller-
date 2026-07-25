@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./TechPage.css";
-import product1 from "../../assets/WonderMill.webp";
+import product1 from "../../assets/wondermill.png";
 import product2 from "../../assets/WonderMiller.webp";
 import product3 from "../../assets/wondermiller.png";
-import product4 from "../../assets/emerystonedresser.png";
-import product5 from "../../assets/new4.webp";
-import banner from "../../assets/WonderMill.webp";
+import product4 from "../../assets/dressermachine.png";
+import product5 from "../../assets/floura_bg.png";
+import product6 from "../../assets/quadra.webp";
+import banner from "../../assets/tp.png";
 
 const products = [
   {
@@ -37,12 +38,24 @@ const products = [
   },
   {
     id: 5,
-    name: "Choyal Support",
+    name: "Floura",
     image: product5,
-    description: "A web-enabled remote control and support system for Wonder Mills, allowing diagnostics and assistance without needing an engineer on-site."
-
-
+    description:"Floura is the world’s first flour grinding & vending machine. It uses stone ground technology and is specifically designed for grocery stores. It’s size allows it to easily become part of the store."
   },
+  {
+    id: 6,
+    name: "iQuadra",
+    image: product6,
+    description:"For mills prioritizing efficiency above all, iQuadra is Choyal's most advanced digital stone mill, delivering up to 40% power savings with intelligent grain feeding, data logging, and hydraulic auto-pressure control."
+  },
+  // {
+  //   id: 5,
+  //   name: "Choyal Support",
+  //   image: product5,
+  //   description: "A web-enabled remote control and support system for Wonder Mills, allowing diagnostics and assistance without needing an engineer on-site."
+
+
+  // },
 ];
 function ProductCard({ product }) {
   const [expanded, setExpanded] = useState(false);

@@ -107,28 +107,23 @@
 .tech-hero{
     position:relative;
     width:100%;
-    height:360px;
+    height:490px;
     overflow:hidden;
     margin-bottom:60px;
 }
 
 .tech-hero img{
-    width:100%;
-    height:100%;
+    width:110%;
+    height:110%;
     object-fit:cover;
-    display:block;
+    object-position:center center;
 }
 
 .tech-hero::after{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(
-      90deg,
-      rgba(0,0,0,.68),
-      rgba(0,0,0,.38),
-      rgba(0,0,0,.08)
-    );
+    background:CSS
 }
 
 .tech-overlay{
@@ -146,7 +141,7 @@
     background:#ff7800;
     color:#fff;
     padding:8px 18px;
-    font-size:15px;
+    font-size:20px;
     font-weight:700;
     letter-spacing:2px;
     margin-bottom:18px;
@@ -154,15 +149,15 @@
 }
 
 .tech-overlay h1{
-    font-size:36px;
+    font-size:40px;
     margin-bottom:16px;
     font-family:"Lato",sans-serif;
 }
 
 .tech-overlay p{
-    font-size:15px;
+    font-size:18px;
     line-height:1.8;
-    color:#f5f5f5;
+    color:white;
     font-family:"Lato",sans-serif;
 }
 

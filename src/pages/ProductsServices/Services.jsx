@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./Services.css";
-import product1 from "../../assets/WonderMill.webp";
+import product1 from "../../assets/wondermill.png";
 import product2 from "../../assets/quadra.webp";
 import product3 from "../../assets/WonderMiller.webp";
 import product4 from "../../assets/wondermiller.png";
-import product5 from "../../assets/new4.webp";
-import product6 from "../../assets/AMC.jpg";
-import product7 from "../../assets/saas.jpg";
-import banner from "../../assets/WonderMill.webp";
+import product5 from "../../assets/floura_bg.png";
+import product6 from "../../assets/spare.png";
+import product7 from "../../assets/AMC.png";
+import product8 from "../../assets/saas.png";
+import banner from "../../assets/ec.png";
 
 const products = [
   {
@@ -38,22 +39,28 @@ const products = [
   },
   {
     id: 5,
-    name: "Spares",
+    name: "Floura",
     image: product5,
-    description:"Genuine WonderMill components, supplied directly so your system stays at rated performance without downtime or third-party guesswork."
+    description:"Floura is the world’s first flour grinding & vending machine. It uses stone ground technology and is specifically designed for grocery stores. It’s size allows it to easily become part of the store."
   },
   {
     id: 6,
-    name: "AMC (Annual Maintenance Contract)",
+    name: "Spares",
     image: product6,
+    description:"Genuine WonderMill components, supplied directly so your system stays at rated performance without downtime or third-party guesswork."
+  },
+  {
+    id: 7,
+    name: "AMC (Annual Maintenance Contract)",
+    image: product7,
     description: "Ongoing service, inspection, and calibration support built into the partnership — keeping your mill running at peak output for the life of the system."
 
 
   },
   {
-    id: 7,
+    id: 8,
     name: "SaaS Layer",
-    image: product7,
+    image: product8,
     description:"The cloud and connectivity backbone behind every installation: remote operation, live energy monitoring, automated safety alerts (alarm → remedy → shutdown), and MIS reporting — accessible from anywhere."
 
 

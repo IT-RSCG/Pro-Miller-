@@ -35,15 +35,16 @@ export default function Mavian() {
             participants to build practical expertise and successful careers in
             the global food processing and milling industry.
             <br />
-            Know more about CSMT:
-            <a
-              href=" https://www.csmt.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "blue", textDecoration: "none" }}
-            >
-              https://www.csmt.in
-            </a>{" "}
+            <br/>
+            
+              <a
+                href="https://www.csmt.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="director-btn"
+              >
+                Know More 
+              </a>
 
             </p>
 

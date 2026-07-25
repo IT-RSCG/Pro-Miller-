@@ -166,7 +166,7 @@
 .pm-card p {
   color: black;
   line-height: 1.8;
-  font-size:13px;
+  font-size:15px;
   font-family:"Lato",sans-serif;
 }
 
@@ -318,14 +318,14 @@
 .pm-bottom-right h2 {
   margin: 0;
   color:#0b5b42;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
   font-family: "Lato", sans-serif;
 }
 
 .pm-heading-line {
-  width: 10   0px;
+   width:100px;
   height: 3px;
   background: #000;
   margin: 16px 0 22px;
@@ -456,88 +456,252 @@
 .pm-bottom-card{
     animation:fadeUp 1.2s ease;
 }
+@media (max-width:1024px){
 
-@media (max-width: 1024px) {
-  .pm-section {
-    padding: 80px 18px;
+  .pm-section{
+    padding:60px 20px;
   }
 
-  .pm-showcase {
-    grid-template-columns: 1fr;
-    gap: 28px;
+  .pm-container{
+    max-width:100%;
   }
 
-  .pm-device {
-    order: -1;
+  .pm-showcase{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
   }
 
-  .pm-card {
-    padding: 28px;
-    border-radius: 20px;
+  /* Laptop center me hi rahe */
+  .pm-device{
+    order:0;
+    margin:0;
+    padding:0;
   }
 
-  .pm-bottom-card {
-    padding: 36px;
-    gap: 30px;
-  }
   .pm-device img{
-    width:min(100%,300px);
+    width:280px;
+    display:block;
+    margin:auto;
+  }
+
+  .pm-card{
+    width:100%;
+    max-width:700px;
+    padding:24px;
+  }
+
+  .pm-card-left,
+  .pm-card-right{
+    justify-self:stretch;
+  }
+
+  .pm-bottom-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:24px;
+    padding:28px;
+    margin-top:24px;
+  }
+
+  .pm-bottom-left{
+    width:120px;
+  }
+
+  .pm-bottom-right{
+    max-width:100%;
+  }
+
+  .pm-bottom-card::before,
+  .pm-bottom-card::after{
+    display:none;
+  }
 }
-}
 
-@media (max-width: 640px) {
-  .pm-section {
-    padding: 64px 16px;
+@media (max-width:640px){
+
+  .pm-section{
+    padding:45px 16px;
   }
 
-  .pm-brand-row {
-    flex-direction: column;
-    gap: 10px;
+  .pm-brand-row{
+    flex-direction:column;
+    gap:10px;
   }
 
-  .pm-brand {
-    font-size: clamp(2.2rem, 12vw, 3rem);
-    letter-spacing: 0;
+  .pm-brand{
+    font-size:32px;
+    text-align:center;
   }
 
-  .pm-subtitle,
-  .pm-card p,
-  .pm-bottom-right p {
-    font-size: 0.96rem;
-    line-height: 1.65;
+  .pm-badge{
+    font-size:22px;
+    padding:8px 18px;
   }
 
-  .pm-device img {
-    width: min(100%, 360px);
+  .pm-subtitle{
+    font-size:15px;
+    line-height:1.7;
+    padding:0 6px;
+  }
+
+  .pm-showcase{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;      /* laptop aur cards ka gap kam */
+  }
+
+  .pm-device{
+    margin:0;
+    padding:0;
+    line-height:0;
+  }
+
+  .pm-device img{
+    width:220px;
+    max-width:100%;
+    display:block;
+    margin:auto;
   }
 
   .pm-glow,
-  .pm-bg-circle {
-    display: none;
+  .pm-bg-circle{
+    display:none;
   }
 
-  .pm-card {
-    padding: 24px;
-    border-radius: 16px;
+  .pm-card{
+    width:100%;
+    max-width:100%;
+    padding:20px 16px;
+    border-radius:18px;
+    margin:0;
   }
 
-  .pm-icon {
-    width: 56px;
-    height: 56px;
+  .pm-card h3{
+    font-size:18px;
+    margin:16px 0 10px;
   }
 
-  .pm-bottom-card {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 28px;
-    border-radius: 20px;
+  .pm-card p{
+    font-size:14px;
+    line-height:1.7;
   }
 
-  .pm-bottom-left {
-    width: 120px;
+  .pm-icon{
+    width:52px;
+    height:52px;
+    font-size:22px;
   }
 
-  .pm-bottom-right h2 {
-    font-size: 1.55rem;
+  /* Bottom Card */
+
+  .pm-bottom-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+
+    width:100%;
+
+    padding:20px 16px;
+    margin-top:20px;
+    gap:16px;
+
+    overflow:hidden;
+    border-radius:18px;
   }
+
+  .pm-bottom-left{
+    width:90px;
+    margin:0;
+  }
+
+  .pm-bottom-left img{
+    width:100%;
+    height:auto;
+  }
+
+  .pm-bottom-right{
+    width:100%;
+    max-width:100%;
+  }
+
+  .pm-bottom-right h2{
+    font-size:20px;
+  }
+
+  .pm-bottom-right p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .pm-heading-line{
+    width:80px;
+    margin:12px auto 16px;
+  }
+
+  .pm-bottom-card::before,
+  .pm-bottom-card::after{
+    display:none;
+  }
+
+}
+
+@media (max-width:380px){
+
+  .pm-section{
+    padding:40px 12px;
+  }
+
+  .pm-brand{
+    font-size:28px;
+  }
+
+  .pm-badge{
+    font-size:18px;
+    padding:7px 14px;
+  }
+
+  .pm-subtitle{
+    font-size:14px;
+  }
+
+  .pm-device img{
+    width:190px;
+  }
+
+  .pm-card{
+    padding:16px;
+  }
+
+  .pm-card h3{
+    font-size:16px;
+  }
+
+  .pm-card p{
+    font-size:13px;
+  }
+
+  .pm-icon{
+    width:46px;
+    height:46px;
+    font-size:20px;
+  }
+
+  .pm-bottom-left{
+    width:80px;
+  }
+
+  .pm-bottom-right h2{
+    font-size:18px;
+  }
+
+  .pm-bottom-right p{
+    font-size:13px;
+  }
+
 }

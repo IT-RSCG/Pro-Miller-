@@ -262,25 +262,23 @@
 
 .navbar__mobile {
   position: fixed;
-  top: 0;
-  padding-top: calc(var(--nav-height) + 22px);
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #ffffff;
+  top: 22px;
+  right: 0;
+  width: 320px;
+  max-width: 85%;
+  height: calc(100vh - 22px);
+  background: #fff;
   z-index: 999;
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-  overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  transform: translateX(100%);
+  transition: transform .35s ease;
+
+  overflow-y: auto;
+  box-shadow: -10px 0 25px rgba(0,0,0,.08);
 }
 
 .navbar__mobile--open {
-  max-height: 100vh;
-  opacity: 1;
-  pointer-events: auto;
-  overflow-y: auto;
+  transform: translateX(0);
 }
 
 .navbar__mobile-list {
@@ -320,33 +318,87 @@
   color: var(--color-ink-soft);
   border-bottom: 1px solid var(--color-rule);
 }
+@media (max-width:900px){
 
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0 18px;
+  .navbar{
+      padding:0 16px;
   }
 
-  .navbar__nav {
-    display: none;
+  /* Desktop menu hide */
+  .navbar__nav{
+      display:none !important;
   }
 
-  .navbar__burger {
-    display: flex;
-    flex-shrink: 0;
+  /* Burger show */
+  .navbar__burger{
+      display:flex !important;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      background:none;
+      border:none;
+      cursor:pointer;
+  }
+
+  .navbar__logo-image{
+      height:48px;
+      max-width:170px;
+  }
+
+  .navbar__mobile-list{
+      padding:20px;
+  }
+
+  .navbar__mobile button,
+  .navbar__mobile .navbar__link{
+      width:100%;
+      display:block;
+      padding:15px 0;
+      font-size:15px;
+      text-decoration:none;
+      color:var(--color-ink);
+      background:none;
+      border:none;
+      text-align:left;
+      text-transform:uppercase;
+      font-weight:600;
+  }
+
+  .navbar__mobile .navbar__dropdown-link{
+      display:block;
+      padding:12px;
+      font-size:14px;
   }
 }
+@media (max-width:768px){
 
-@media (max-width: 480px) {
-  .navbar {
-    padding: 0 14px;
-  }
+    .navbar{
+        height:68px;
+    }
 
-  .navbar__logo-image {
-    height: 48px;
-    max-width: 68vw;
-  }
+    .navbar__logo-image{
+        height:45px;
+    }
 
-  .navbar__topbar-inner {
-    padding: 0 8px;
-  }
+    .navbar__mobile{
+        width:300px;
+    }
+
+}
+@media (max-width:576px){
+
+    .navbar{
+        padding:0 14px;
+    }
+
+    .navbar__logo-image{
+        height:42px;
+        max-width:150px;
+    }
+
+    .navbar__mobile{
+        width:280px;
+        max-width:90%;
+    }
+
 }

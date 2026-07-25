@@ -62,6 +62,10 @@ const NAV_ITEMS = [
 
   {
     label: "Modules",
+    dropdown: [
+      { label: "Milling Calculators", path:"/calculator" },
+      { label: "Grain Circle ERP", path:"/GrainCircle" },
+    ],
   },
 ];
 export default function Navbar() {

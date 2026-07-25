@@ -368,33 +368,320 @@
     transform: translateY(-3px);
     background: #fcfbf8;
 }
+/* ===================================================
+   RESPONSIVE
+=================================================== */
 
-@media (max-width: 1200px) {
-    .about-top { gap: 40px; }
-    .about-content h2, .section-heading h2, .about-cta h2 { font-size: 36px; }
+/* ---------- Large Laptop ---------- */
+
+@media (max-width:1200px){
+
+.about-container{
+    padding:0 28px;
 }
+
+.about-top{
+    gap:45px;
+}
+
+.about-title,
+.section-heading h2{
+    font-size:33px;
+}
+
+.about-image-wrapper{
+    height:390px;
+}
+
+}
+
+/* ---------- Laptop ---------- */
 
 @media (max-width:992px){
 
-    .about-top{
-        grid-template-columns:1fr;
-        gap:35px;
-        align-items:center;
-    }
-
-    .about-image-wrapper{
-        height:350px;
-    }
-
-}
-@media (max-width: 768px) {
-    .about-section { padding: 40px 0; }
-    .benefits-grid { grid-template-columns: 1fr; }
-    .section-heading h2, .about-cta h2 { font-size: 26px; }
+.about-container{
+    padding:0 24px;
 }
 
-@media (max-width: 576px) {
-    .about-top { gap: 30px; margin-bottom: 40px; }
-    .about-btn, .cta-button { width: 100%; }
-    .about-cta { padding: 30px 20px; }
+.about-top{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.about-content{
+    order:1;
+}
+
+.about-image-wrapper{
+    order:2;
+    height:380px;
+}
+
+.about-title{
+    margin-top:20px;
+    font-size:32px;
+}
+
+.about-content p{
+    font-size:15px;
+}
+
+.about-btn{
+    margin-top:30px;
+}
+
+.benefits-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.section-heading h2{
+    font-size:32px;
+}
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+.about-section{
+    padding:45px 0;
+}
+
+.about-container{
+    padding:0 20px;
+}
+
+.about-top{
+    gap:30px;
+    margin-bottom:32px;
+}
+
+.about-title{
+    font-size:28px;
+    line-height:1.2;
+}
+
+.about-content{
+    gap:8px;
+}
+
+.about-content p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+.about-btn{
+    margin-top:25px;
+    padding:13px 26px;
+}
+
+.about-image-wrapper{
+    height:320px;
+    border-radius:18px;
+}
+
+.section-heading{
+    margin-bottom:28px;
+}
+
+.section-heading span{
+    font-size:17px;
+}
+
+.section-heading h2{
+    font-size:28px;
+}
+
+.benefits-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.benefit-card{
+    padding:18px;
+}
+
+.benefit-card h3{
+    font-size:18px;
+}
+
+.benefit-card p{
+    font-size:14px;
+}
+
+}
+
+/* ---------- Large Phones ---------- */
+
+@media (max-width:576px){
+
+.about-container{
+    padding:0 18px;
+}
+
+.about-title{
+    font-size:28px;
+}
+
+.about-content p{
+    font-size:14px;
+}
+
+.about-btn{
+    width:100%;
+    margin-top:20px;
+}
+
+.about-image-wrapper{
+    height:260px;
+}
+
+.section-heading span{
+    font-size:16px;
+}
+
+.section-heading h2{
+    font-size:24px;
+    line-height:1.3;
+}
+
+.benefits-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+.benefit-card{
+    padding:20px;
+}
+
+.benefit-icon{
+    width:46px;
+    height:46px;
+}
+
+.benefit-card h3{
+    font-size:18px;
+}
+
+.benefit-card p{
+    font-size:14px;
+}
+
+}
+
+/* ---------- Phones ---------- */
+
+@media (max-width:430px){
+
+.about-container{
+    padding:0 16px;
+}
+
+.about-title{
+    font-size:24px;
+}
+
+.about-title-line{
+    margin-top:8px;
+}
+
+.about-content{
+    font-size:14px;
+}
+
+.about-content p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+.about-btn{
+    padding:12px 20px;
+    font-size:14px;
+}
+
+.about-image-wrapper{
+    height:220px;
+    border-radius:16px;
+}
+
+.section-heading{
+    margin-bottom:24px;
+}
+
+.section-heading span{
+    font-size:15px;
+}
+
+.section-heading h2{
+    font-size:22px;
+}
+
+.benefit-card{
+    padding:18px;
+}
+
+.benefit-icon{
+    width:42px;
+    height:42px;
+    margin-bottom:14px;
+}
+
+.benefit-card h3{
+    font-size:17px;
+}
+
+.benefit-card p{
+    font-size:13px;
+    line-height:1.6;
+}
+
+}
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width:360px){
+
+.about-container{
+    padding:0 14px;
+}
+
+.about-title{
+    font-size:22px;
+}
+
+.about-content p{
+    font-size:13px;
+}
+
+.about-btn{
+    font-size:13px;
+}
+
+.about-image-wrapper{
+    height:200px;
+}
+
+.section-heading h2{
+    font-size:20px;
+}
+
+.benefit-card{
+    padding:16px;
+}
+
+.benefit-card h3{
+    font-size:16px;
+}
+
+.benefit-card p{
+    font-size:12px;
+}
+
+.benefit-icon{
+    width:40px;
+    height:40px;
+    font-size:14px;
+}
+
 }

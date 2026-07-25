@@ -66,13 +66,18 @@ export default function ProcessTimeline() {
 
             return (
               <div
-                key={step.id}
-                className={`process__step ${
-                  isHovered ? "process__step--hovered" : ""
-                }`}
-                onMouseEnter={() => setHovered(step.id)}
-                onMouseLeave={() => setHovered(null)}
-              >
+  key={step.id}
+  className={`process__step ${
+    isHovered ? "process__step--hovered" : ""
+  } ${isExpanded ? "process__step--expanded" : ""}`}
+  onMouseEnter={() => setHovered(step.id)}
+  onMouseLeave={() => setHovered(null)}
+  onClick={() => {
+    if (window.innerWidth <= 1024) {
+      toggleCard(step.id);
+    }
+  }}
+>
                 {/* Timeline Number */}
                 <div className="process__number">{step.id}</div>
 

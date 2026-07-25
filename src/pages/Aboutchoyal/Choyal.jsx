@@ -3,15 +3,16 @@ import "./Choyal.css";
 
 import start from "../../assets/about1.webp";
 import vishwakarma from "../../assets/about2.webp";
-import emerystone from "../../assets/emerystone.webp";
+import emerystone from "../../assets/emerystone.png";
 import start1 from "../../assets/about4.webp";
-import automation from "../../assets/automation.webp";
-import wm from "../../assets/wm.webp";
+import automation from "../../assets/2010.png";
+import wm from "../../assets/WonderMill.webp";
 import eleven from "../../assets/about7.webp";
-import thirteen from "../../assets/2013.png";
+import thirteen from "../../assets/emerystonedresser.png";
 import eighteen from "../../assets/2018.webp";
 import twentyone from "../../assets/2021.webp";
 import twentyfive from "../../assets/about11.webp";
+import twentysix from "../../assets/2026.jpg";
 
 export default function Choyal() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -83,6 +84,12 @@ export default function Choyal() {
       text: "Choyal legacy evolves into independent entities including Choyal Grinding Solutions Pvt. Ltd., focusing on advanced grinding technologies.",
       image: twentyfive,
     },
+    {
+      year: "2026",
+      title: "Promiller Launched",
+      text: "A next-generation milling ecosystem by R.S. Choyal Group, empowering flour mills with smart automation, advanced engineering, and intelligent management for greater efficiency, lower costs, and sustainable growth.",
+      image: twentysix,
+    },
   ];
 
   const handlePrev = () => {
@@ -115,17 +122,15 @@ export default function Choyal() {
               that six-decade engineering legacy directly to individual mill
               owners through a zero-investment modernization model.
               <br />
-              <span className="bold-text">
-                Know more about RS Choyal Group:
-              </span>
+              <br/>
               <a
-                href="https://www.rschoyalgroup.com"
+                href=" https://www.rschoyalgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "blue", textDecoration: "none" }}
+                className="director-btn"
               >
-                https://www.rschoyalgroup.com
-              </a>{" "}
+                Know More 
+              </a>
             </p>
           </div>
 

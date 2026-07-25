@@ -1,128 +1,132 @@
-.director-page{
-    background:#fff;
-    padding:60px 0;
-}
- .bold-text{
-  font-weight:700;
+.director-page {
+  background: #fff;
+  padding: 50px 0;
 }
 
-.director-container{
-    width:min(1180px,calc(100% - 40px));
-    margin:auto;
-    display:grid;
-    grid-template-columns:380px 1fr;
-    gap:60px;
-    align-items:center;
+.bold-text {
+  font-weight: 700;
 }
-.rs-theater-image-side{
+
+.director-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.director-container.reverse {
+  grid-template-columns: 1fr 420px;
+  margin-top: 80px;
+}
+
+.director-image img {
   width: 100%;
-  height: 330px;
-  overflow: hidden;
-  border-radius: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
+  object-fit:cover;
+  display: block;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.rs-theater-big-photo{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  padding: 0;
-  transition: transform 0.45s ease;
-}
-
-.rs-theater-image-side:hover .rs-theater-big-photo{
-  transform: scale(1.04);
-}
-
-.director-container.reverse{
-    grid-template-columns:1fr 420px;
-    margin-top:80px;
-}
-
-.director-image img{
-    width:100%;
-    display:block;
-    border:3px solid #fff;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
 .director-image:hover img {
   transform: scale(1.05);
 }
 
-.director-subtitle{
-    color:#ff7800;
-    font-size:15px;
-    font-weight:700;
-    letter-spacing:4px;
-    text-transform:uppercase;
+/* Heading */
+
+.director-content h2 {
+  font-size: 38px;
+  color: #0d5b43;
+  margin-bottom: 14px;
+  font-family: "Lato", sans-serif;
 }
 
-.director-content h2{
-    font-size:36px;
-    color:#0d5b43;
-    margin:10px 0 25px;
-    font-family:"Lato",sans-serif;
+/* Role & Company */
+
+.director-info {
+  margin-bottom: 28px;
 }
 
-.director-content p{
-    font-size:15px;
-    line-height:1.9;
-    color:#222;
-    margin-bottom:22px;
-    font-family:"Lato",sans-serif;
-    text-align:justify;
+.director-role {
+  margin: 0;
+  /* color: #ff7800; */
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.6;
 }
 
-/* @media(max-width:900px){
-
-.director-container,
-.director-container.reverse{
-    grid-template-columns:1fr;
-    gap:35px;
-    margin-top:50px;
+.director-company {
+  margin-top: 10px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  max-width: 650px;
 }
 
-.director-image{
-    max-width:360px;
-    margin:auto;
+/* Paragraph */
+
+.director-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #222;
+  margin-bottom: 22px;
+  font-family: "Lato", sans-serif;
+  text-align: justify;
 }
 
-.director-content{
-    text-align:center;
-    text-align:justify;
+/* Website Link */
+
+.director-btn {
+  display: inline-block;
+  padding: 20px 60px;
+  background-color: #ff7800;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-.director-content h2{
-    font-size:34px;
+.director-btn:hover {
+  background-color: #ffa8065d;
 }
 
-} */
- @media(max-width:900px){
+/* Mobile */
 
-.director-container,
-.director-container.reverse{
-    grid-template-columns:1fr;
-    gap:35px;
-    margin-top:40px;
-}
+@media (max-width: 900px) {
 
-.director-content{
-    order:1;
-    text-align:justify;
-}
+  .director-container,
+  .director-container.reverse {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
 
-.director-image,
-.rs-theater-image-side{
-    order:2;
-    max-width:360px;
-    margin:auto;
-}
+  .director-content {
+    order: 1;
+    text-align: justify;
+  }
 
-.director-content h2{
-    font-size:34px;
-}
+  .director-image {
+    order: 2;
+    max-width: 360px;
+    margin: auto;
+  }
 
+  .director-content h2 {
+    font-size: 32px;
+  }
+
+  .director-role {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .director-company {
+    font-size: 18px;
+  }
 }

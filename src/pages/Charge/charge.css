@@ -1,6 +1,6 @@
 .mavian-page{
     background:#fff;
-    padding:60px 0;
+    padding:50px 0;
 }
 
 .extra_text{
@@ -46,7 +46,20 @@
     font-family:"Lato",sans-serif;
     text-align:justify;
 }
+.director-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff7800;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
 
+.director-btn:hover {
+  background-color: #ffa8065d;
+}
 @media(max-width:900px){
 
 .mavian-container{
