@@ -23,7 +23,6 @@ const faqs = [
 
 export default function FAQ() {
   const [open, setOpen] = useState(null);
-
   return (
     <section className="faq-page">
 

@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
-import loogo from "../../../assets/loogo.webp";
+import loogo from "../../../assets/promiller_logo.png";
 import { Link } from "react-router-dom";
 import MailIcon from '@mui/icons-material/Mail';
 import CallIcon from '@mui/icons-material/Call';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const NAV_ITEMS = [
   {
     label: "About",
@@ -162,9 +163,10 @@ export default function Navbar() {
       >
         {item.dropdown ? (
           <>
-            <button className="navbar__link" type="button">
-              {item.label}
-            </button>
+            <button className="navbar__link navbar__link--dropdown" type="button">
+  <span>{item.label}</span>
+  <KeyboardArrowDownIcon className="navbar__arrow" />
+</button>
 
             <ul
               className={`navbar__dropdown ${
@@ -196,12 +198,14 @@ export default function Navbar() {
   </ul>
 </nav>
 
-          {/* BURGER */}
-          <button className="navbar__burger" onClick={() => setMobileOpen(v => !v)}>
-            <span />
-            <span />
-            <span />
-          </button>
+          <button
+  className={`navbar__burger ${mobileOpen ? "navbar__burger--open" : ""}`}
+  onClick={() => setMobileOpen(!mobileOpen)}
+>
+  <span />
+  <span />
+  <span />
+</button>
 
         </div>
 
@@ -257,6 +261,34 @@ export default function Navbar() {
       </li>
     ))}
   </ul>
+  <div className="navbar__mobile-social">
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    rel="noreferrer"
+    className="navbar__topbar-social"
+  >
+    <FacebookIcon />
+  </a>
+
+  <a
+    href="https://twitter.com"
+    target="_blank"
+    rel="noreferrer"
+    className="navbar__topbar-social"
+  >
+    <XIcon />
+  </a>
+
+  <a
+    href="https://instagram.com"
+    target="_blank"
+    rel="noreferrer"
+    className="navbar__topbar-social"
+  >
+    <InstagramIcon />
+  </a>
+</div>
 </div>
       </header>
     </>

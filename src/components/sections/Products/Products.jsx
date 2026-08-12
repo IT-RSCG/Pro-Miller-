@@ -66,18 +66,17 @@ export default function ProcessTimeline() {
 
             return (
               <div
-  key={step.id}
-  className={`process__step ${
-    isHovered ? "process__step--hovered" : ""
-  } ${isExpanded ? "process__step--expanded" : ""}`}
-  onMouseEnter={() => setHovered(step.id)}
-  onMouseLeave={() => setHovered(null)}
-  onClick={() => {
-    if (window.innerWidth <= 1024) {
-      toggleCard(step.id);
-    }
-  }}
->
+                key={step.id}
+                className={`process__step ${isHovered ? "process__step--hovered" : ""
+                  } ${isExpanded ? "process__step--expanded" : ""}`}
+                onMouseEnter={() => setHovered(step.id)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => {
+                  if (window.innerWidth <= 1024) {
+                    toggleCard(step.id);
+                  }
+                }}
+              >
                 {/* Timeline Number */}
                 <div className="process__number">{step.id}</div>
 
@@ -86,9 +85,8 @@ export default function ProcessTimeline() {
 
                 {/* Hover / Expand Card */}
                 <div
-                  className={`process__hover-card ${sideClass} ${
-                    isExpanded ? "expanded" : ""
-                  }`}
+                  className={`process__hover-card ${sideClass} ${isExpanded ? "expanded" : ""
+                    }`}
                 >
                   {/* IMAGE */}
                   <div
@@ -97,9 +95,9 @@ export default function ProcessTimeline() {
                   >
                     <img src={step.image} alt={step.title} />
 
-                    <div className="process__image-overlay">
+                    {/* <div className="process__image-overlay">
                       <h4 className="vertical-text">{step.title}</h4>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* CONTENT */}
@@ -119,13 +117,13 @@ export default function ProcessTimeline() {
 
                       <p>{step.description}</p>
 
-                      <div className="process__card-links">
+                      {/* <div className="process__card-links">
                         <a href="/">→ Learn More</a>
 
                         <a href="/">→ Download Brochure</a>
 
                         <a href="/">→ Contact Expert</a>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                 </div>
@@ -133,6 +131,27 @@ export default function ProcessTimeline() {
             );
           })}
         </div>
+
+        <div className="process-mobile">
+  {steps.map((step) => (
+    <div className="process-mobile-card" key={step.id}>
+
+      <div className="mobile-step-number">
+        {step.id}
+      </div>
+
+      <div className="mobile-card-image">
+        <img src={step.image} alt={step.title}/>
+      </div>
+
+      <div className="mobile-card-content">
+        <h3>{step.title}</h3>
+        <p>{step.description}</p>
+      </div>
+
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );

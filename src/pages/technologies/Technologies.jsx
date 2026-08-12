@@ -6,7 +6,7 @@ import product3 from "../../assets/wondermiller.png";
 import product4 from "../../assets/dressermachine.png";
 import product5 from "../../assets/floura_bg.png";
 import product6 from "../../assets/quadra.webp";
-import banner from "../../assets/tp.png";
+import banner from "../../assets/image.png";
 
 const products = [
   {
@@ -90,16 +90,14 @@ function Services() {
   <img src={banner} alt="Patented Innovations" />
 
   <div className="tech-overlay">
-    <span className="tech-tag">
+    {/* <span className="tech-tag">
       PATENTED TECHNOLOGY
-    </span>
+    </span> */}
 
-    <h1>Our 6 Patented Innovations</h1>
+    <h1>OUR PATENTED INNOVATIONS</h1>
 
     <p>
-      Since establishing India's first dedicated R&D centre for flour milling in
-      2012, RS Choyal Group has registered 6 patented technologies, each solving
-      a real, recurring problem millers face.
+      Driven by continuous innovation, RS Choyal Group’s R&D excellence has transformed industry challenges into patented solutions that improve efficiency, reliability, and performance across modern milling operations.
     </p>
   </div>
 </div>

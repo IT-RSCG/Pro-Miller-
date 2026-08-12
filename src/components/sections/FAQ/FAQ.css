@@ -197,7 +197,16 @@
   .faq-card{
     padding:20px;
   }
-
+  .faq-q{
+    font-weight:400;
+    color:#000;
+  }
+  .faq-a{
+    font-weight:400;
+  }
+  .faq-a p{
+    color:#000;
+  }
 }
 @media (max-width:767px){
 
@@ -234,6 +243,8 @@
     gap:12px;
     align-items:flex-start;
     line-height:1.5;
+    font-weight:400;
+    color:#000;
   }
 
   .icon{
@@ -248,10 +259,12 @@
 
   .faq-a{
     font-size:14px;
+     font-weight:400;
   }
 
   .faq-a p{
     line-height:1.7;
+    color:#000;
   }
 
 }
@@ -267,6 +280,7 @@
 
   .faq-hero p{
     font-size:13px;
+     font-weight:400;     
   }
 
   .faq-body{

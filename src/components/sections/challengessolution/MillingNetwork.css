@@ -1,5 +1,5 @@
 .network-section {
-  padding: 40px 0 70px; 
+  padding: 40px 0 30px; 
  background: 
     radial-gradient(circle at 35% 40%, oklch(62% 0.10 145) 0%, transparent 65%),
     linear-gradient(135deg, oklch(55% 0.09 145) 0%, oklch(42% 0.08 150) 100%); 
@@ -36,7 +36,7 @@
   font-size: 20px;
   max-width: 600px;
   margin: 0 auto;
-  font-family:"Inter", "Helvetica Neue", Arial, sans-serif;
+  font-family:"Lato", sans-serif;
 }
 
 /* Three-Column Grid System */
@@ -151,9 +151,9 @@
   user-select: none;
   z-index: 10;
 }
-/* ==========================================================
-   RESPONSIVE
-========================================================== */
+.mobile-network{
+display:none;
+}
 
 @media (max-width:1024px){
 
@@ -198,6 +198,7 @@ border-radius:10px;
 font-size:13px;
 line-height:1.45;
 word-break:break-word;
+font-family:"Lato",sans-serif;
 }
 
 .node-indicator{
@@ -225,15 +226,26 @@ transform:translateX(-5px);
 TABLETS
 =========================== */
 
-@media (max-width:768px){
+@media (min-width:768px) and (max-width:1024px){
 
 .network-header h2{
 font-size:26px;
 }
-
-.network-grid{
+.network-section {
+  margin-top:40px;}
+/* .network-grid{
 grid-template-columns:1fr 110px 1fr;
 gap:12px;
+} */
+.network-grid{
+      grid-template-columns:1fr 260px 1fr;
+      gap:20px;
+      align-items:center;
+}
+
+.circuit-board{
+      width:260px;
+      max-height:450px;
 }
 
 .network-node{
@@ -243,29 +255,22 @@ min-height:64px;
 
 .network-node p{
 font-size:12px;
+font-family:"Lato",sans-serif;
 }
 
-.circuit-board{
+/* .circuit-board{
 max-height:260px;
-}
+} */
 
 }
 
-
-/* ===========================
-MOBILE
-=========================== */
 
 @media (max-width:576px){
 
 .network-section{
 margin:0 10px;
-padding:30px 0 40px;
+padding:30px 0 35px;
 border-radius:18px;
-}
-
-.network-container{
-padding:0 10px;
 }
 
 .network-header h2{
@@ -273,61 +278,128 @@ font-size:22px;
 }
 
 .network-grid{
-
-grid-template-columns:1fr;
-gap:20px;
-
-}
-
-.network-center{
-
 display:none;
+}
+
+.mobile-network{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:20px;
+}
+
+.mobile-item{
+
+background:#ffffff;
+border-radius:14px;
+overflow:hidden;
+border:1px solid #d8d2c4;
+transition:.3s;
+}
+
+.mobile-item.open{
+
+border-color:#2e7d32;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 }
 
-.network-col{
+.mobile-question{
 
-gap:12px;
-
-}
-
-.network-col h3{
-
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+border:none;
+padding:18px 16px;
+cursor:pointer;
+font-size:15px;
+font-weight:400;
 text-align:left;
+font-family:"Lato",sans-serif;
 
 }
 
-.network-node{
+.mobile-left{
 
-padding:14px;
-min-height:auto;
+display:flex;
+align-items:flex-start;
+gap:12px;
+flex:1;
 
 }
 
-.network-node p{
+.mobile-dot{
+
+width:10px;
+height:10px;
+border-radius:50%;
+margin-top:6px;
+flex-shrink:0;
+
+}
+
+.mobile-arrow{
 
 font-size:14px;
-line-height:1.5;
+color:#2e7d32;
+margin-left:12px;
 
 }
 
-.active-challenge,
-.active-solution{
+.mobile-answer{
 
-transform:none;
-
-}
-
-.dimmed-solution{
-
-opacity:1;
-transform:none;
+overflow:hidden;
 
 }
-
+.solution-wrapper{
+    position: relative;
+    background:#f7fbf7;
+    border-top:1px solid #edf2ed;
+    padding:16px 16px 16px 0;
 }
 
+.problem-arrow{
+    position:absolute;
+    left:20px;
+    top:4px;
 
+    width:5px;
+    height:25px;
+
+    border-left:2px solid var(--arrow-color);
+    border-bottom:2px solid var(--arrow-color);
+}
+
+.problem-arrow::after{
+    content:"";
+    position:absolute;
+    right:-4px;
+    bottom:-4px;
+
+    width:6px;
+    height:6px;
+
+    border-top:2px solid var(--arrow-color);
+    border-right:2px solid var(--arrow-color);
+    transform:rotate(45deg);
+}
+
+.solution-content{
+    margin-left:34px;
+    padding:2px 0 2px 0;   
+    font-family:"Lato",sans-serif;
+}
+
+.solution-content p{
+    margin:0;
+    font-size:15px;
+    line-height:1.6;
+    color:#000;
+    font-family:"Lato",sans-serif;
+}
+}
 /* ===========================
 VERY SMALL DEVICES
 =========================== */
@@ -349,6 +421,7 @@ padding:12px;
 .network-node p{
 
 font-size:13px;
+font-family:"Lato",sans-serif;
 
 }
 

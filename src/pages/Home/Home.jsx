@@ -6,6 +6,7 @@ import FeatureGrid from "../../components/sections/FeatureGrid/FeatureGrid";
 import BusinessModel from "../../components/sections/BusinessModel/BusinessModel";
 import ProductShowcase from "../../components/sections/ProductShowcase/ProductShowcase";
 import HowItWorks from "../../components/sections/ProcessWorking/HowItWorks";
+import Operationsflow from "../../components/sections/Operationsflow/Operationsflow";
 import FAQ from "../../components/sections/FAQ/FAQ";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     <main>
       <Hero />
       <About />
+      <Operationsflow/>
       <Products />
       <MillingNetwork />
       <HowItWorks />

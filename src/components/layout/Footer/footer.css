@@ -106,11 +106,15 @@
    font-family:"Lato",sans-serif;
   color: #ffffff;
 }
-
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
 .footer__logo img {
-  height: 55px;
+  max-height: 60px;
   width: auto;
-  display: block;
+  transform: scale(1.25);
+  transform-origin: center;
 }
 @media (min-width:1025px){
 

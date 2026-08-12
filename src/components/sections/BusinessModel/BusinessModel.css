@@ -28,12 +28,7 @@
   }
 }
 
-/* ==========================================================================
-   ORBIT PAGE STRUCTURE
-   ========================================================================== */
-
 .orbit-page-wrapper {
-  min-height: 100vh;
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -44,10 +39,6 @@
   box-sizing: border-box;
   overflow-x: hidden; 
 }
-
-/* ===========================
-   HEADING
-=========================== */
 
 .orbit-heading-section {
   width: 100%;
@@ -82,9 +73,6 @@ align-items:center;
 overflow:visible;
 min-height:620px;
 }
-/* ===========================
-   ORBIT TRACK
-=========================== */
 
 .orbit-track-ring {
   position: absolute;
@@ -93,12 +81,8 @@ min-height:620px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 1.5px dashed #d8d2c4;
-  max-width: 90vw; /* Keeps the ring bounded within the screen width */
+  max-width: 90vw; 
 }
-
-/* ===========================
-   CENTER BOLT
-=========================== */
 
 @keyframes boltPulse {
   0%, 100% {
@@ -122,11 +106,7 @@ min-height:620px;
   height: 48px;
 }
 
-/* ==========================================================================
-   ORBITING ITEMS & POSITION FIXES
-   ========================================================================== */
 
-/* The Anchor Point: Leave this clean so JS animations don't conflict */
 .orbiting-node-wrapper {
   position: absolute;
   top: 50%;
@@ -136,9 +116,6 @@ min-height:620px;
   z-index: 10;
 }
 
-/* ===========================
-   CAPSULE (The Visual Badge)
-=========================== */
 
 .orbit-item-capsule {
   display: flex;
@@ -152,11 +129,6 @@ background: linear-gradient(
   #ff9419 45%,
   #ffb347 100%
 );
-/* background: linear-gradient(
-  90deg,
-  oklch(45% 0.08 150) 0%,
-  oklch(55% 0.09 145) 100%
-); */
   border: 1.5px solid black;
   box-sizing: border-box;
   box-shadow: 0 6px 20px rgba(28, 26, 23, 0.08);
@@ -190,9 +162,6 @@ background: linear-gradient(
   height: 45%;
 }
 
-/* ===========================
-   TEXT
-=========================== */
 
 .item-text-stack {
   display: flex;
@@ -220,10 +189,6 @@ background: linear-gradient(
   display: var(--orbit-desc-display);
 }
 
-/* ==========================================================
-   TABLET
-========================================================== */
-
 @media (max-width:1024px){
 
 :root{
@@ -231,6 +196,7 @@ background: linear-gradient(
 --orbit-capsule-width:230px;
 --orbit-capsule-padding:10px 14px;
 --orbit-title-size:13px;
+--orbit-desc-display: flex;
 --orbit-icon-size:34px;
 
 }
@@ -268,11 +234,6 @@ height:42px;
 
 }
 
-
-/* ==========================================================
-   MOBILE
-========================================================== */
-
 @media (max-width:768px){
 
 :root{
@@ -280,6 +241,7 @@ height:42px;
 --orbit-capsule-width:170px;
 --orbit-capsule-padding:8px 12px;
 --orbit-title-size:11px;
+--orbit-desc-display: flex;
 --orbit-icon-size:28px;
 
 }
@@ -339,10 +301,6 @@ font-size:10px;
 }
 
 
-/* ==========================================================
-   SMALL MOBILE
-========================================================== */
-
 @media (max-width:480px){
 
 :root{
@@ -350,6 +308,7 @@ font-size:10px;
 --orbit-capsule-width:140px;
 --orbit-capsule-padding:7px 10px;
 --orbit-title-size:10px;
+--orbit-desc-display: flex;
 --orbit-icon-size:24px;
 
 }
@@ -400,16 +359,11 @@ font-size:10px;
 
 .item-text-desc{
 
-display:none;
+font-size:10px;
 
 }
 
 }
-
-
-/* ==========================================================
-   EXTRA SMALL
-========================================================== */
 
 @media (max-width:360px){
 
@@ -430,6 +384,11 @@ height:190px !important;
 .item-text-title{
 
 font-size:9px;
+
+}
+.item-text-desc{
+
+font-size:10px;
 
 }
 

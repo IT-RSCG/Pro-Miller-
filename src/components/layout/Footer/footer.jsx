@@ -1,9 +1,10 @@
 import "./footer.css";
-import logo from "../../../assets/logo1.webp";
+import logo from "../../../assets/mavianlogo.png";
 import CallIcon from '@mui/icons-material/Call';
 import MailIcon from '@mui/icons-material/Mail';
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LanguageIcon from "@mui/icons-material/Language";
+import SupportButton from "../SupportButton/SupportButton";
 
 
 export default function Footer() {
@@ -78,6 +79,7 @@ export default function Footer() {
           <img src={logo} alt="Promiller Logo" />
         </div>
       </div>
+        <SupportButton mobileFooter />
     </footer>
   );
 }

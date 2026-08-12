@@ -70,7 +70,7 @@ const orbitItems = [
     color: "#f59e0b",
     icon: (
       <svg
-        width="18"
+        width="18"     
         height="18"
         viewBox="0 0 24 24"
         fill="none"
@@ -174,7 +174,7 @@ export default function BusinessModel() {
         className="orbit-system-container"
         style={{
           width: containerSize,
-          height: containerSize,
+          // height: containerSize,
         }}
       >
         <div

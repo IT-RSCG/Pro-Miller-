@@ -8,7 +8,7 @@ import product5 from "../../assets/floura_bg.png";
 import product6 from "../../assets/spare.png";
 import product7 from "../../assets/AMC.png";
 import product8 from "../../assets/saas.png";
-import banner from "../../assets/ec.png";
+import banner from "../../assets/services.png";
 
 const products = [
   {
@@ -100,14 +100,12 @@ function Services() {
     <img src={banner} alt="Products & Services" />
 
     <div className="services-overlay">
-      <span className="services-tag">PRODUCTS & SERVICES</span>
+      {/* <span className="services-tag">PRODUCTS & SERVICES</span> */}
 
-      <h1>Products & Services</h1>
+      <h1>PRODUCTS & SERVICES</h1>
 
       <p>
-        ProMiller's product range gives you a clear path: start with the core
-        WonderMill upgrade, add the digital tools that matter to you, and keep
-        the system running with ongoing support.
+        Transform your milling operations with a flexible ecosystem that grows with your business. ProMiller combines advanced upgrades, intelligent digital tools, and expert support to deliver sustainable productivity and operational excellence.
       </p>
     </div>
   </div>

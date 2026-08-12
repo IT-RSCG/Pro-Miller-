@@ -456,71 +456,62 @@
 .pm-bottom-card{
     animation:fadeUp 1.2s ease;
 }
-@media (max-width:1024px){
+@media (max-width:1024px) and (min-width:641px){
 
   .pm-section{
     padding:60px 20px;
   }
 
-  .pm-container{
-    max-width:100%;
-  }
-
   .pm-showcase{
-    display:flex;
-    flex-direction:column;
+    display:grid;
+    grid-template-columns:1fr 260px 1fr;
+    gap:18px;
     align-items:center;
-    gap:22px;
   }
 
-  /* Laptop center me hi rahe */
   .pm-device{
-    order:0;
-    margin:0;
-    padding:0;
+    justify-content:center;
+    align-items:center;
   }
 
   .pm-device img{
-    width:280px;
-    display:block;
-    margin:auto;
+    width:240px;
+    max-width:100%;
   }
 
   .pm-card{
-    width:100%;
-    max-width:700px;
-    padding:24px;
+    max-width:100%;
+    padding:18px;
+    border-radius:20px;
   }
 
-  .pm-card-left,
-  .pm-card-right{
-    justify-self:stretch;
+  .pm-card h3{
+    font-size:18px;
+    margin:16px 0 10px;
+  }
+
+  .pm-card p{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .pm-icon{
+    width:56px;
+    height:56px;
+    font-size:24px;
   }
 
   .pm-bottom-card{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    gap:24px;
+    margin-top:30px;
     padding:28px;
-    margin-top:24px;
+    gap:30px;
   }
 
   .pm-bottom-left{
     width:120px;
   }
 
-  .pm-bottom-right{
-    max-width:100%;
-  }
-
-  .pm-bottom-card::before,
-  .pm-bottom-card::after{
-    display:none;
-  }
 }
-
 @media (max-width:640px){
 
   .pm-section{

@@ -201,6 +201,9 @@
   .features-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .features-header h2{
+font-size:30px;
+}
 }
 @media (max-width: 680px) {
   .features-header {
@@ -208,22 +211,21 @@
   }
 
   .features-header h2 {
-    font-size: clamp(26px, 8vw, 32px);
+    font-size: 22px;
   }
 
   .features-subtitle {
     font-size: 1rem;
   }
 
-  /* 2 cards per row on mobile */
-  .features-container {
-    grid-template-columns: repeat(2, 1fr);
+ .features-container {
+    grid-template-columns: 1fr;
     gap: 0;
   }
 
   .feature-card {
     min-height: auto;
-    padding: 28px 18px;
+    padding: 20px 0px;
   }
 
   .feature-card h3 {
@@ -249,11 +251,14 @@
   .feature-card {
     padding: 22px 12px;
   }
-
+  
   .feature-card h3 {
     font-size: 15px;
   }
 
+   .features-header h2 {
+    font-size: 20px;
+  }
   .feature-points li {
     font-size: 12px;
   }
