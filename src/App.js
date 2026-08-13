@@ -7,7 +7,6 @@ import ScrollToTop from "./components/common/ScrollToTopButton";
 
 import Home from "./pages/Home/Home";
 import Products from "./components/sections/Products/Products";
-
 import RSChoyal from "./pages/AboutRSChoyal/RSChoyal";
 import Choyal from "./pages/Aboutchoyal/Choyal";
 import Mavian from "./pages/AboutMavian/Mavian";
@@ -26,6 +25,7 @@ export default function App() {
     <>
       <Navbar />
       <ScrollToTop />
+      <SupportButton />
 
       <Routes>
         <Route path="/" element={<Home />} />
